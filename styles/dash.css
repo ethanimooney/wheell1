@@ -1,0 +1,119 @@
+body{
+  top: 0;
+  left: 0;
+  margin: 0;
+  min-width: 100%;
+  min-height: 130vh;
+}
+
+/*********** Header CSS ***********/
+.header{
+  top: 0vh;
+  left: 0vw;
+  width: 100%;
+  position: absolute;
+  font-family: 'Scada';
+  font-weight: 700;
+  color: #444444;
+}
+
+#logo{
+  padding-top: 4vh;
+  padding-left: 2vw;
+  padding-bottom: 3vh;
+  position: relative;
+  width: 98%;
+}
+
+#circle{
+  height: 70px;
+  width: 70px;
+  background-color: #ee6c52;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+h1{
+  margin: 0;
+  font-size: 2.4305555555555554vw;
+  top: 6vh;
+  left: 8vw;
+  position: absolute;
+}
+
+.name{
+  position: inherit;
+  top: 0vh;
+  right: 5vw;
+}
+
+h2{
+  font-size: 3vw;
+  margin: 2vh 0vw 0vh 0vw;
+  right: 0;
+}
+
+h4{
+  font-weight: 400;
+  text-align: right;
+  margin: 3px;
+}
+
+
+/*********** Main Part CSS ***********/
+
+.mainBody{
+  position: relative;
+  height: 100vh;
+  top: 23vh;
+  left: 0;
+  margin: 20px;
+  border: 2px solid #dddddd;
+  border-radius: 20px;
+  display: grid;
+}
+
+label{
+  font-family: 'Scada';
+  font-weight: 700;
+  color: #444444;
+  font-size: 2vw;
+}
+
+form{
+  margin-top: 5vh;
+  margin-right: 3vw;
+  text-align: right;
+}
+
+/*********** the buttons where you can select the place and submit it ***********/
+.buttons{
+  position: relative;
+  top: 4vh;
+}
+
+select{
+  border-style: none;
+  border-radius: 10px;
+  margin-right: 1em;
+  background-color: #ee6c52;
+  /* text */
+  color: white;
+  font-family: 'Scada';
+  font-weight: 700;
+  font-size: 1.3vw;
+  /* box size */
+  height: 4vh;
+  width: 85%;
+}
+#hold{
+  font-style: italic;
+}
+
+#submit{
+  height: 4vh;
+  width: 8vw;
+  font-family: 'Scada';
+  font-weight: 700;
+  font-size: 4vh;
+}
