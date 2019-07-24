@@ -4,8 +4,12 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Scada:400,400i,700,700i&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1.4.5/dist/bouncer.polyfills.min.js"></script>
     <script src="https://kit.fontawesome.com/f5a30c435a.js"></script>
     <script src="/scripts/script.js"></script>
+    <script src="/scripts/validation.js">
+
+    </script>
     <meta charset="utf-8">
     <link rel='icon' href='/images/circle_favicon.png' type='image/png'/ >
     <title>whee//</title>
@@ -20,27 +24,71 @@
   <body>
     <div class="main">
       <div class="container">
-        <div class="box a">
-          <h1><i class="fas fa-wheelchair fa-9x"></i></h1>
 
-        </div>
+          <div class="box a">
+            <div class="imageText">
+              <h1><i class="fas fa-wheelchair fa-9x"></i></h1> <p>use a wheelchair?<br>hate going out?<br>meet whee//.</p>
+            </div>
+            <div class="paragraphText">
+              <p>hello</p>
+            </div>
+          </div>
 
         <div class="box b">
           <div class="signup">
-              <h2>let's get to know each other.</h2>
-              <h4>create a wheell account now</h4>
-              <form class="signupForm" action="/dashboard" method="post">
-                <input type="text" name="firstName" value="" placeholder="first name">
-                <input type="text" name="lastName" value="" placeholder="last name">
-                <input type="text" name="email" value="" placeholder="email">
-                <h4>choose a secure password</h4>
-                <input type="text" name="password" value="" placeholder="password">
-                <input type="text" name="passwordRepeat" value="" placeholder="repeat password">
-                <button type="button" name="signUpButton">let's go</button>
-              </form>
+            <h2>let's get to know each other.</h2>
+            <h4>create a wheell account now</h4>
+            <form class="signupForm" class="validate-me" id="validate-me" action="/dashboard" method="post" data-validate>
+              <input type="text" name="firstName" value="" placeholder="first name" required>
+              <input type="text" name="lastName" value="" placeholder="last name" required>
+              <input type="email" name="email" value="" placeholder="email" required>
+
+              <h4>must contain 1 upper, 1 lower, 1 number, and be > 8 in length.</h4>
+              <input type="password" name="password" id="password" placeholder="password" minlength="8" data-bouncer-message="Please choose a password that includes at least 1 upper, 1 lower, and 1 number." pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+              <input type="password" name="confirm-password" id="confirm-password" placeholder="repeat password" data-bouncer-match="#password" data-bouncer-mismatch-message="Your passwords do not match." required>
+
+              <button type="submit" name="signUpButton">let's go</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </body>
+
+<!-- Form Validation Link - leave here -->
+<script>
+			var bouncer = new Bouncer('[data-validate]', {
+				disableSubmit: true,
+				customValidations: {
+					valueMismatch: function (field) {
+						// Look for a selector for a field to compare
+						// If there isn't one, return false (no error)
+						var selector = field.getAttribute('data-bouncer-match');
+						if (!selector) return false;
+						// Get the field to compare
+						var otherField = field.form.querySelector(selector);
+						if (!otherField) return false;
+						// Compare the two field values
+						// We use a negative comparison here because if they do match, the field validates
+						// We want to return true for failures, which can be confusing
+						return otherField.value !== field.value;
+					}
+				},
+				messages: {
+					valueMismatch: function (field) {
+						var customMessage = field.getAttribute('data-bouncer-mismatch-message');
+						return customMessage ? customMessage : 'Please make sure the fields match.'
+					}
+				}
+			});
+			document.addEventListener('bouncerFormInvalid', function (event) {
+				console.log(event.detail.errors);
+				console.log(event.detail.errors[0].offsetTop);
+				window.scrollTo(0, event.detail.errors[0].offsetTop);
+			}, false);
+			document.addEventListener('bouncerFormValid', function () {
+        document.forms[0].submit();
+			}, false);
+		</script>
+
 </html>

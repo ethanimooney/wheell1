@@ -28,6 +28,8 @@ class DashHandler(webapp2.RequestHandler):
     def get(self):
         dash_template = the_jinja_env.get_template("/templates/dashBoard.html")
         self.response.write(dash_template.render())
+    def post(self):
+        self.response.write("Hello")
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),

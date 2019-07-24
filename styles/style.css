@@ -114,6 +114,12 @@ h4{
   padding: 0 0 0 0;
   color: #444444;;
 }
+.imageText{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: 1;
+}
 .b{
   display: flex;
   align-items: center;
@@ -154,6 +160,19 @@ button:focus {
   border: none;
   margin: 8px 10px 8px 0px;
   padding: 10px 10px 10px 0;
+}
+
+.error {
+	border-color: #ee6c52;
+}
+
+.error-message {
+	color: #ee6c52;
+  font-size: 10px;
+	font-style: italic;
+  font-weight: 400;
+	margin-bottom: 1em;
+  text-align: right;
 }
 
  input:focus {
