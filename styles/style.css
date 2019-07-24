@@ -90,15 +90,16 @@ h4{
   flex-basis: 100%;
   flex: 1;
 }
-
 .a {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1.25;
   background-color: #dddddd;
+  align-items: left;
 }
 .a h1{
+  font-weight: 700i;
   padding: 50px;
   font-size: 40px;
   color: #444444;
@@ -106,12 +107,12 @@ h4{
 .a p{
   padding: 10px 50px 10px 50px;
   font-weight: 400;
-  font-size: 25px !important;
+  font-size: 20px !important;
   color: #444444;
 }
 .a i{
-  padding: 50px;
-  color: #444444;
+  padding: 0 0 0 0;
+  color: #444444;;
 }
 .b{
   display: flex;
@@ -154,14 +155,16 @@ button:focus {
   margin: 8px 10px 8px 0px;
   padding: 10px 10px 10px 0;
 }
-}
+
  input:focus {
-    outline: none !important;
-    border: none;
-    background-color: #444444;
-    color: white;
-    padding: 0 0 0 0;
-    box-sizing: border-box;
+   color: white;
+   width: 100%;
+   text-align: right;
+   border-radius: 20px;
+   background-color: #444444;
+   border: none;
+   margin: 8px 10px 8px 0px;
+   padding: 10px 10px 10px 0;
 }
 .signupForm input:hover {
       border:none;

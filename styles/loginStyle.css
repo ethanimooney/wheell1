@@ -14,13 +14,14 @@ div .loginPane{
   border: 1px solid #dddddd;
   font-family: "Scada", sans-serif;
   font-weight: 700;
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   border-radius: 20px;
   background-color: white;
   color: #444444;
   margin: 190px auto;
   padding: 20px;
+  text-align: center;
 }
 div h1{
   text-align: center;
@@ -29,13 +30,27 @@ div h1{
 }
 div p{
 
-  padding-top: 10px;
+  padding-top: 40px;
   font-size: 15px;
   font-weight: 400;
   text-align: center;
   color: #dddddd;
 }
+div p a{
+  text-decoration: none;
+  color: #ee6c52;
+}
+div p a:hover{
+  text-decoration: none;
+  color: #444444;
+}
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 
 form .loginForm{
   color: white;
@@ -47,16 +62,17 @@ form .loginForm{
   border-radius: 20px;
   background-color: #dddddd;
   border: none;
-  margin: 8px 10px 8px 0px;
-  padding: 10px 10px 10px 0;
+  margin: 20px 0px 20px 0px;
+  padding: 20px 0px 20px 0px;
 }
-}
+
 .loginForm input:focus {
     outline: none !important;
     border: none;
     background-color: #444444;
     color: white;
-    padding: 0 0 0 0;
+    margin: 20px 0px 20px 0px;
+    padding: 20px 0px 20px 0px;
     box-sizing: border-box;
 }
 .loginForm input:hover {
@@ -73,11 +89,13 @@ form .loginForm{
   font-weight: 700;
   background-color: #ee6c52;
   color: white;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 25px 10px 25px;
+  margin-top: 10px;
+  margin-bottom: -10px;
   border-radius: 20px;
 
   border: none;
-  margin: 0 240px 0 240px;
+text-align: center;
 }
  button:hover{
   background-color: #444444;

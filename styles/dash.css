@@ -94,7 +94,7 @@ form{
 
 select{
   border-style: none;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-right: 1em;
   background-color: #ee6c52;
   /* text */
@@ -112,10 +112,11 @@ select{
 
 #submit{
   height: 4vh;
-  width: 8vw;
+  width: 6vw;
   font-family: 'Scada';
   font-weight: 700;
-  font-size: 4vh;
+  font-size: 2vh;
+  border-radius: 20px;
 }
 
 /*********** map ***********/
