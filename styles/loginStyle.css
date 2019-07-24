@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+body{
+  background-color: #white;
+}
+div .main{
+  background-color: white;
+  width: 100%;
+}
+div .loginPane{
+  border: 1px solid #dddddd;
+  font-family: "Scada", sans-serif;
+  font-weight: 700;
+  height: 500px;
+  width: 500px;
+  border-radius: 20px;
+  background-color: white;
+  color: #444444;
+  margin: 190px auto;
+  padding: 20px;
+}
+div h1{
+  text-align: center;
+  color: #444444;
+  padding: 10px;
+}
+div p{
+
+  padding-top: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  color: #dddddd;
+}
+
+
+form .loginForm{
+  color: white;
+}
+.loginForm input{
+  color: white;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #dddddd;
+  border: none;
+  margin: 8px 10px 8px 0px;
+  padding: 10px 10px 10px 0;
+}
+}
+.loginForm input:focus {
+    outline: none !important;
+    border: none;
+    background-color: #444444;
+    color: white;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+}
+.loginForm input:hover {
+      border:none;
+      background-color: #444444;
+      color: white;
+}
+::placeholder{
+  color: white;
+  padding: 0 0 0 0;
+}
+
+.loginForm button{
+  font-weight: 700;
+  background-color: #ee6c52;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+
+  border: none;
+  margin: 0 240px 0 240px;
+}
+ button:hover{
+  background-color: #444444;
+}

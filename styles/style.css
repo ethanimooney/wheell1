@@ -3,28 +3,185 @@
   padding: 0;
   line-height: 1;
 }
-/* body{
-background-color: #F1FFFA;
-} */
+
+/* Nav bar Styling */
 
 nav{
+  margin: 0 0 0 0;
+  font-family: "Scada", sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
 
 }
 nav ul{
-
+  list-style: none;
 }
 nav ul li{
-
+  float: right;
  }
 nav ul li a:hover {
-
+  color: #dddddd;
+}
+nav ul li.logo{
+  float: left;
+  display: block;
+  margin: 50px 50px 50px 15px;
+  font-size: 35px;
+  color: #444444;
 }
 nav a{
   text-decoration: none;
+  color: #ee6c52;
+  font-size: 25px;
+  display: block;
+  margin: 55px 55px 55px 35.5px;
 }
 nav i{
-
+  display: block;
+  float: left;
+  margin: 35.5px 0px 0px 35.5px;
+  color: #ee6c52;
 }
-nav i:hover{
 
+/* Main Div and Body Styling */
+
+div.main{
+  font-family: "Scada", sans-serif;
+  font-weight: 700;
+}
+body{
+  background-color: #444444;
+}
+h2{
+  color: #444444;
+  text-align: right;
+}
+h4{
+  color: #dddddd;
+  text-align: right;
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+
+
+/* Main Page Content FlexBox Styling */
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.a {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1.25;
+  background-color: #dddddd;
+}
+.a h1{
+  padding: 50px;
+  font-size: 40px;
+  color: #444444;
+}
+.a p{
+  padding: 10px 50px 10px 50px;
+  font-weight: 400;
+  font-size: 25px !important;
+  color: #444444;
+}
+.a i{
+  padding: 50px;
+  color: #444444;
+}
+.b{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  background-color: #dddddd;
+}
+.signup{
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px 40px 30px 30px;
+  height: .5fr;
+  width: .75fr;
+}
+
+
+/* Sign up form Styling */
+
+form .signupForm{
+  color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.signupForm input{
+  color: white;
+  width: 100%;
+  text-align: right;
+  border-radius: 20px;
+  background-color: #dddddd;
+  border: none;
+  margin: 8px 10px 8px 0px;
+  padding: 10px 10px 10px 0;
+}
+}
+ input:focus {
+    outline: none !important;
+    border: none;
+    background-color: #444444;
+    color: white;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+}
+.signupForm input:hover {
+      border:none;
+      background-color: #444444;
+      color: white;
+}
+::placeholder{
+  color: white;
+  padding: 0 0 0 0;
+}
+.signupForm button{
+  font-weight: 700;
+  background-color: #ee6c52;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  float: right;
+  border: none;
+  margin-top: 10px;
+}
+ button:hover{
+  background-color: #444444;
 }
