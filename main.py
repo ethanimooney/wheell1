@@ -1,7 +1,12 @@
 import webapp2
 import os
 import jinja2
-users = {'firstName': {}, 'lastName': {}, 'email': {}, 'password': {}}
+users = {
+'firstName': {},
+'lastName': {},
+'email': {},
+'password': {},
+}
 
 the_jinja_env = jinja2.Environment(
      loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -14,18 +19,22 @@ class MainHandler(webapp2.RequestHandler):
         landing_template = the_jinja_env.get_template("/templates/index.html")
         self.response.write(landing_template.render())
 
-    def post(self, firstName, lastName, email, password):
-        self.firstName = self.request.get('firstName')
-        self.lastName = self.request.get('lastName')
-        self.email = self.request.get('email')
-        self.password = self.request.get('password')
-        for i in range (len(users) + 2):
-            if i > len(users):
-                firstName.update(self.firstName)
-                lastName.update(self.lastName)
-                email.update(self.email)
-                password.update(self.password)
-        self.response.write("yay!")
+    def post(self):
+        dash_template = the_jinja_env.get_template("/templates/dashboard.html")
+ # TODO: 
+        firstName = self.request.get('firstName')
+        lastName = self.request.get('lastName')
+        email = self.request.get('email')
+        password = self.request.get('password')
+
+        userLib = {
+            "firstName":firstName,
+        }
+
+        users['firstName'][0] = firstName
+
+        self.response.write(dash_template.render(userLib))
+        self.response.write(users)
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
