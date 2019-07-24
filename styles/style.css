@@ -75,6 +75,11 @@ h4{
   align-content: center;
   justify-content: center;
   height: 85vh;
+  background-color: #dddddd;
+
+  /* background-image: url("/images/happy_4.jpg");
+  background-repeat: no-repeat;
+  background-size: auto auto; */
 }
 
 .row {
@@ -92,10 +97,12 @@ h4{
 }
 .a {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-basis: 100%;
   flex: 1.25;
-  background-color: #dddddd;
+
+  /* background-color: white;
+  border-radius: 20px; */
   align-items: left;
   text-align: left;
 }
@@ -103,32 +110,51 @@ h4{
   font-weight: 700i;
   padding: 50px;
   font-size: 40px;
-  color: #444444;
+  color: white;
   text-align: left;
 }
 .a h2{
   font-weight: 700i;
-  padding: 50px 30px 20px 30px;
+  padding: 30px 10px 20px 30px;
   font-size: 65px;
-  color: #444444;
+  color: white;
+}
+.a h3{
+  font-weight: 400i;
+  padding: 50px 10px 20px 30px;
+  font-size: 65px;
+  color: white;
 }
 .a p{
-  padding: 10px 50px 10px 50px;
+  padding: 20px 10px 10px 50px;
   font-weight: 400;
   font-size: 20px !important;
   color: #444444;
+  text-align: right;
 }
 .a i{
   padding: 0 0 0 0;
-  color: #444444;;
+  color: white;
 }
 .imageText{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: .5;
+}
+.paragraphText{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: .5;
+}
+.actualParagraph{
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
   flex: .5;
 }
-.paragraphText{
+.headText{
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
@@ -141,7 +167,9 @@ h4{
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-  background-color: #dddddd;
+  /* background-image: url("/images/happy_4.jpg");
+  background-repeat: no-repeat;
+  background-size: auto auto; */
 }
 .signup{
   background-color: white;
