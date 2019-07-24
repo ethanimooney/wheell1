@@ -97,11 +97,19 @@ h4{
   flex: 1.25;
   background-color: #dddddd;
   align-items: left;
+  text-align: left;
 }
 .a h1{
   font-weight: 700i;
   padding: 50px;
   font-size: 40px;
+  color: #444444;
+  text-align: left;
+}
+.a h2{
+  font-weight: 700i;
+  padding: 50px 30px 20px 30px;
+  font-size: 65px;
   color: #444444;
 }
 .a p{
@@ -118,7 +126,13 @@ h4{
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
-  flex: 1;
+  flex: .5;
+}
+.paragraphText{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: .5;
 }
 .b{
   display: flex;
