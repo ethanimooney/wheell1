@@ -117,3 +117,14 @@ select{
   font-weight: 700;
   font-size: 4vh;
 }
+
+/*********** map ***********/
+
+#map {
+  border-radius: 20px;
+  position: absolute;
+  top: 20vh;
+  left: 4vw;
+  height: 75%;
+  width: 90%;
+}

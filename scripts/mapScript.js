@@ -47,14 +47,14 @@ function initMap() {
     1300 1st Ave, Seattle, WA 98101<br>\
     <a href="http://bit.ly/2JJhHCa">Get Directions</a>', 47.607309, -122.3403218, 'green'],
   ];
-var map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
     center: center
   });
   //adds the window with each place's info
-var infowindow =  new google.maps.InfoWindow({});
-var marker, count;
-for (count = 0; count < locations.length; count++) {
+  var infowindow =  new google.maps.InfoWindow({});
+  var marker, count;
+  for (count = 0; count < locations.length; count++) {
     var image = {
       url: icons[locations[count][3]].icon,
       scaledSize: new google.maps.Size(40, 40)
@@ -66,7 +66,7 @@ for (count = 0; count < locations.length; count++) {
       map: map,
       title: locations[count][0]
     });
-google.maps.event.addListener(marker, 'click', (function (marker, count) {
+    google.maps.event.addListener(marker, 'click', (function (marker, count) {
       return function () {
         infowindow.setContent(locations[count][0]);
         infowindow.open(map, marker);

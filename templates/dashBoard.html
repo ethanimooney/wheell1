@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../styles/dash.css">
     <link href="https://fonts.googleapis.com/css?family=Scada:400,400i,700,700i&display=swap" rel="stylesheet">
+    <script src="../scripts/mapScript.js"></script>
+    <!-- Maps API link -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmVCl0OPzV0a5jSGpdBmPjY2t7jJd85_o&callback=initMap"></script>
 
     <title>Dashboard</title>
   </head>
@@ -41,11 +45,8 @@
 
           <input id="submit" type="submit" name="submit" value="Let's go there ...">
         </div>
-
       </form>
-
-
+      <div id="map"></div>
     </div>
-
   </body>
 </html>
