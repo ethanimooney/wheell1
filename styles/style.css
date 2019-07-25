@@ -108,7 +108,7 @@ h4{
 }
 .a h1{
   font-weight: 700i;
-  padding: 50px;
+  padding: 5.458515283842795vh;
   font-size: 40px;
   color: white;
   text-align: left;
@@ -126,7 +126,7 @@ h4{
   color: white;
 }
 .a p{
-  padding: 20px 10px 10px 50px;
+  padding: 2.183406113537118vh 1.091703056768559vh 1.091703056768559vh 5.458515283842795vh;
   font-weight: 400;
   font-size: 20px !important;
   color: #444444;
@@ -174,7 +174,7 @@ h4{
 .signup{
   background-color: white;
   border-radius: 20px;
-  padding: 30px 40px 30px 30px;
+  padding: 3.2751091703056767vh 4.366812227074236vh 3.2751091703056767vh 3.2751091703056767vh;
   height: .5fr;
   width: .75fr;
 }
@@ -200,8 +200,8 @@ button:focus {
   border-radius: 20px;
   background-color: #dddddd;
   border: none;
-  margin: 8px 10px 8px 0px;
-  padding: 10px 10px 10px 0;
+  margin: 0.8733624454148472vh 0.5952380952380952vw 0.8733624454148472vh 0px;
+  padding: 1.091703056768559vh 0.5952380952380952vw 1.091703056768559vh 0;
 }
 
 .error {
@@ -224,8 +224,8 @@ button:focus {
    border-radius: 20px;
    background-color: #444444;
    border: none;
-   margin: 8px 10px 8px 0px;
-   padding: 10px 10px 10px 0;
+   margin: 0.8733624454148472vh 0.5952380952380952vw 0.8733624454148472vh 0px;
+   padding: 1.091703056768559vh 0.5952380952380952vw 1.091703056768559vh 0;
 }
 .signupForm input:hover {
       border:none;
@@ -240,7 +240,7 @@ button:focus {
   font-weight: 700;
   background-color: #ee6c52;
   color: white;
-  padding: 10px 20px 10px 20px;
+  padding: 1.091703056768559vh  1.1904761904761905vw 1.091703056768559vh  1.1904761904761905vw;
   border-radius: 20px;
   float: right;
   border: none;

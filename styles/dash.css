@@ -167,11 +167,13 @@ select{
   right: 7vw;
   font-family: 'Scada';
   font-size: 5vw;
+  color: #444444;
 }
 
 /* when you hover over the X, the X turns into a red color */
-.close:hover {
-  color: red;
+.close:hover, .close:focus {
+  color: #ee6c52;
+  cursor:pointer;
 }
 
 .box{

@@ -1,12 +1,7 @@
 import webapp2
 import os
 import jinja2
-users = {
-'firstName': {},
-'lastName': {},
-'email': {},
-'password': {},
-}
+from userModel import User
 
 the_jinja_env = jinja2.Environment(
      loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -21,20 +16,23 @@ class MainHandler(webapp2.RequestHandler):
 
     def post(self):
         dash_template = the_jinja_env.get_template("/templates/dashBoard.html")
- # TODO:
-        firstName = self.request.get('firstName')
-        lastName = self.request.get('lastName')
-        email = self.request.get('email')
-        password = self.request.get('password')
+
+        firstNameInput = self.request.get('firstName')
+        lastNameInput = self.request.get('lastName')
+        emailInput = self.request.get('email')
+        passwordInput = self.request.get('password')
 
         userLib = {
-            "firstName":firstName,
+            "email":emailInput,
         }
 
-        users['firstName'][0] = firstName
+        userLib['email'] =  User(firstName=firstNameInput, lastName=lastNameInput, email=emailInput, password=passwordInput).put()
+
+        queryLib = {
+            # "firstNameQuery": User.query().filter(User.email == "ethanimooney@gmail.com").fetch().firstName
+        }
 
         self.response.write(dash_template.render(userLib))
-        self.response.write(users)
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
@@ -50,8 +48,16 @@ class DashHandler(webapp2.RequestHandler):
     def post(self):
         self.response.write("Hello")
 
+class PopUpHandler(webapp2.RequestHandler):
+    def get(self):
+        pass
+    def post(self):
+        dash_template = the_jinja_env.get_template("/templates/dashboard.html")
+        self.response.write(dash_template.render())
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/login', LoginHandler),
     ('/dashboard', DashHandler),
+    ('/popup', PopUpHandler),
 ], debug=True)
