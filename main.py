@@ -20,8 +20,8 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(landing_template.render())
 
     def post(self):
-        dash_template = the_jinja_env.get_template("/templates/dashboard.html")
- # TODO: 
+        dash_template = the_jinja_env.get_template("/templates/dashBoard.html")
+ # TODO:
         firstName = self.request.get('firstName')
         lastName = self.request.get('lastName')
         email = self.request.get('email')
