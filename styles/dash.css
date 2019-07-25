@@ -130,6 +130,7 @@ select{
 #map {
   /* position of the map */
   position: absolute;
+  margin-top: 5vh;
   top: 20vh;
   left: 2.4vw;
   /* properties of the map */
@@ -151,7 +152,7 @@ select{
 .pop{
   display: none;
   position: fixed;
-  z-index: 0;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
