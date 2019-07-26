@@ -68,6 +68,11 @@ h4{
   margin: 3px;
 }
 
+#margins{
+  margin: 0;
+  padding: 0;
+}
+
 #logout{
   float: right;
   border-radius: 25px;
