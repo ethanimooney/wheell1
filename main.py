@@ -11,11 +11,14 @@ the_jinja_env = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        print("bobbbb")
         landing_template = the_jinja_env.get_template("/templates/index.html")
+        print("kaleree")
         self.response.write(landing_template.render())
 
     def post(self):
         dash_template = the_jinja_env.get_template("/templates/dashBoard.html")
+        print("hello")
 
         firstNameInput = self.request.get('firstName')
         lastNameInput = self.request.get('lastName')
@@ -25,8 +28,11 @@ class MainHandler(webapp2.RequestHandler):
         userLib = {
             "email":emailInput,
         }
-
-        userLib['email'] =  User(firstName=firstNameInput, lastName=lastNameInput, email=emailInput, password=passwordInput).put()
+        if User.exist(emailInput):
+            print("exist")
+        else:
+            print("create")
+            userLib['email'] =  User(firstName=firstNameInput, lastName=lastNameInput, email=emailInput, password=passwordInput).put()
 
         queryLib = {
             "firstNameQuery": User.query().filter(User.email == 'ethanimooney@gmail.com').fetch()
