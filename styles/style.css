@@ -117,7 +117,7 @@ h4{
 }
 .a h2{
   font-weight: 700i;
-  padding: 5vh 2.3vw 4vh 2.3vw;
+  padding: 5vh 1.1vh 5vh 2.3vw;
   font-size: 4.5vw;
   color: white;
 }
@@ -144,7 +144,7 @@ h4{
   z-index: 0;
   font-size: 30vw;
   margin-left: -6vw;
-  margin-top: 5.5vh;
+  margin-top: 5.8vh;
 
 }
 
@@ -176,7 +176,6 @@ h4{
 .b{
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
@@ -185,6 +184,7 @@ h4{
   background-size: auto auto; */
 }
 .signup{
+  margin-top: 75px;
   background-color: white;
   border-radius: 20px;
   padding: 3.3vh 2.4vw 3.3vh 2.4vw;
