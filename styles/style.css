@@ -7,6 +7,7 @@
 /* Nav bar Styling */
 
 nav{
+  z-index: 10;
   margin: 0 0 0 0;
   font-family: "Scada", sans-serif;
   font-weight: bold;
@@ -138,6 +139,22 @@ h4{
   flex-basis: 100%;
   flex: .5;
 }
+
+#wheel_chair{
+  z-index: 0;
+  font-size: 30vw;
+  margin-left: -6vw;
+  margin-top: 5.5vh;
+
+}
+
+/* .fas{
+  z-index: -3;
+  font-size: 40vw;
+  margin-left: 4vw;
+  padding-top: -4vh;
+} */
+
 .paragraphText{
   display: flex;
   flex-direction: column;
