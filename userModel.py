@@ -1,3 +1,4 @@
+
 from google.appengine.ext import ndb
 
 class User(ndb.Model):
@@ -5,3 +6,8 @@ class User(ndb.Model):
     lastName = ndb.StringProperty(required=True)
     email = ndb.StringProperty(required=True)
     password = ndb.StringProperty(required=True)
+
+    @classmethod
+    def exist(self, emailInput):
+        james = self.query(User.email == emailInput).get()
+        return james != None
