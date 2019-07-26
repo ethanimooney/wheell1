@@ -55,9 +55,15 @@ class PopUpHandler(webapp2.RequestHandler):
         dash_template = the_jinja_env.get_template("/templates/dashboard.html")
         self.response.write(dash_template.render())
 
+class logoutHandler(webapp2.RequestHandler):
+    def get(self):
+        login_template = the_jinja_env.get_template("/templates/login.html")
+        self.response.write(login_template.render())
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/login', LoginHandler),
     ('/dashboard', DashHandler),
     ('/popup', PopUpHandler),
+    ('/logout', logoutHandler),
 ], debug=True)
