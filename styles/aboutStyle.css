@@ -93,7 +93,6 @@ h4{
   flex-wrap: wrap;
   width: 100%;
 }
-
 .column {
   display: flex;
   flex-direction: column;
@@ -102,72 +101,24 @@ h4{
 }
 .a {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-basis: 100%;
   flex: 1.25;
-
-  /* background-color: white;
-  border-radius: 20px; */
   align-items: left;
   text-align: left;
 }
-.a h2{
-  font-weight: 700i;
-  padding: 5vh 1.1vh 5vh 2.3vw;
-  font-size: 4.5vw;
-  color: white;
-}
-
 .a p{
   padding: 2.1vh 1.1vh 1.1vh 5.5vh;
   font-weight: 400;
   font-size: 1.4vw !important;
   color: #444444;
-  text-align: right;
+  text-align: left;
 }
-.a i{
-  padding: 0;
-  color: white;
-}
-.imageText{
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: .5;
-}
-
-#wheel_chair{
-  z-index: 0;
-  font-size: 30vw;
-  margin-left: -6vw;
-  margin-top: 5.8vh;
-
-}
-
-/* .fas{
-  z-index: -3;
-  font-size: 40vw;
-  margin-left: 4vw;
-  padding-top: -4vh;
-} */
-
 .paragraphText{
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: .5;
-}
-.actualParagraph{
-  display: flex;
-  flex-direction: row;
-  flex-basis: 100%;
-  flex: .5;
-}
-.headText{
-  display: flex;
-  flex-direction: row;
-  flex-basis: 100%;
-  flex: .5;
+  flex: 1;
 }
 .b{
   display: flex;
@@ -175,9 +126,6 @@ h4{
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-  /* background-image: url("/images/happy_4.jpg");
-  background-repeat: no-repeat;
-  background-size: auto auto; */
 }
 .signup{
   margin-top: 75px;
@@ -190,74 +138,4 @@ h4{
 
 #know_each{
   font-size: 1.9vw;
-}
-
-/* Sign up form Styling */
-
-form .signupForm{
-  color: white;
-}
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}
-
-.signupForm input{
-  color: white;
-  width: 100%;
-  text-align: right;
-  border-radius: 20px;
-  background-color: #dddddd;
-  border: none;
-  margin: 0.9vh 0.6vw 0.8vh 0vw;
-  padding: 1.1vh 0.6vw 1.1vh 0vw;
-}
-
-.error {
-	border-color: #ee6c52;
-}
-
-.error-message {
-	color: #ee6c52;
-  font-size: 0.7vw;
-	font-style: italic;
-  font-weight: 400;
-	margin-bottom: 1em;
-  text-align: right;
-}
-
- input:focus {
-   color: white;
-   width: 100%;
-   text-align: right;
-   border-radius: 20px;
-   background-color: #444444;
-   border: none;
-   margin: 0.9vh 0.6vw 0.8vh 0vw;
-   padding: 1.1vh 0.7vw 1.1vh 0vw;
-}
-.signupForm input:hover {
-      border:none;
-      background-color: #444444;
-      color: white;
-}
-::placeholder{
-  color: white;
-  padding: 0 0 0 0;
-}
-.signupForm button{
-  font-weight: 700;
-  background-color: #ee6c52;
-  color: white;
-  padding: 1.1vh  1.2vw 1.1vh  1.2vw;
-  border-radius: 20px;
-  float: right;
-  border: none;
-  margin-top: 1.3vh;
-}
- button:hover{
-  background-color: #444444;
 }

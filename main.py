@@ -41,6 +41,14 @@ class LoginHandler(webapp2.RequestHandler):
     def post(self):
         self.response.write("Congrats!")
 
+class LogOutHandler(webapp2.RequestHandler):
+    def get(self):
+        pass
+    def post(self):
+        logout_template = the_jinja_env.get_template("/templates/login.html")
+
+        self.response.write(logout_template.render())
+
 class DashHandler(webapp2.RequestHandler):
     def get(self):
         dash_template = the_jinja_env.get_template("/templates/dashboard.html")
@@ -55,13 +63,10 @@ class PopUpHandler(webapp2.RequestHandler):
         dash_template = the_jinja_env.get_template("/templates/dashboard.html")
         self.response.write(dash_template.render())
 
-class LogOutHandler(webapp2.RequestHandler):
+class AboutHandler(webapp2.RequestHandler):
     def get(self):
-        pass
-    def post(self):
-        logout_template = the_jinja_env.get_template("/templates/login.html")
-
-        self.response.write(logout_template.render())
+        about_template = the_jinja_env.get_template("/templates/about.html")
+        self.response.write(about_template.render())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
@@ -69,4 +74,5 @@ app = webapp2.WSGIApplication([
     ('/dashboard', DashHandler),
     ('/popup', PopUpHandler),
     ('/logout', LogOutHandler),
+    ('/about', AboutHandler),
 ], debug=True)

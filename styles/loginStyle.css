@@ -79,8 +79,8 @@ form .loginForm{
     border: none;
     background-color: #444444;
     color: white;
-    margin: 20px 0px 20px 0px;
-    padding: 20px 0px 20px 0px;
+    margin: 3vh 0px 3vh 0px;
+    padding: 3vh 0px 3vh 0px;
     box-sizing: border-box;
 }
 .loginForm input:hover {
