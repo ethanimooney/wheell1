@@ -29,10 +29,10 @@ class MainHandler(webapp2.RequestHandler):
         userLib['email'] =  User(firstName=firstNameInput, lastName=lastNameInput, email=emailInput, password=passwordInput).put()
 
         queryLib = {
-            # "firstNameQuery": User.query().filter(User.email == "ethanimooney@gmail.com").fetch().firstName
+            "firstNameQuery": User.query().filter(User.email == 'ethanimooney@gmail.com').fetch()
         }
 
-        self.response.write(dash_template.render(userLib))
+        self.response.write(dash_template.render(queryLib))
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):

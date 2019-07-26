@@ -25,6 +25,15 @@ body{
   width: 98%;
 }
 
+i {
+  display: block;
+  float: left;
+  /* margin-top: 5vh;
+  margin-left: 2vw; */
+  margin: 35.5px 0px 0px 35.5px;
+  color: #ee6c52;
+}
+
 #circle{
   height: 10.1vh;
   width: 4.8vw;
@@ -63,7 +72,6 @@ h4{
   float: right;
   border-radius: 25px;
   border-style: none;
-  box-shadow: 0vw 0.3vh 2px black;
   background-color: #ee6c52;
   color: white;
   width: 5vw;
@@ -72,11 +80,13 @@ h4{
   font-size: 1vw;
 }
 #logout:hover{
+  background-color: #444444;
+  color: white;
 
 }
 #logout:active{
-  box-shadow: 0 0.2vh #666;
-  transform: translateY(4px);
+  background-color: #444444;
+  color: white;
 }
 
 
@@ -85,7 +95,7 @@ h4{
 .mainBody{
   position: relative;
   height: 130vh;
-  top: 23vh;
+  top: 6vh;
   left: 0;
   margin: 20px;
   border: 2px solid #dddddd;
@@ -109,7 +119,7 @@ form{
 /*********** the buttons where you can select the place and submit it ***********/
 .buttons{
   position: relative;
-  top: 4vh;
+  top: 2vh;
 }
 
 input:focus,
@@ -119,18 +129,19 @@ button:focus {
     outline: none;
 }
 
-select{
+.mainForm select{
   border-style: none;
-  border-radius: 20px;
+  border-radius: 200px;
   margin-right: 1em;
   background-color: #ee6c52;
+
   /* text */
   color: white;
   font-family: 'Scada';
   font-weight: 700;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   /* box size */
-  height: 4vh;
+  height: 3vh;
   width: 89%;
 }
 #hold{
@@ -138,12 +149,19 @@ select{
 }
 
 #submit{
-  height: 4vh;
+  height: 3vh;
   width: 6vw;
   font-family: 'Scada';
   font-weight: 700;
   font-size: 2vh;
+  background-color: #dddddd;
+  color: white;
+  border: none;
   border-radius: 20px;
+}
+#submit:hover{
+  background-color: #444444;
+  color: white;
 }
 
 /*********** map ***********/
@@ -214,4 +232,58 @@ select{
   /* how big and how wide the box is */
   width: 90%;
   height: 100%;
+}
+
+nav{
+  margin: 0 0 0 0;
+  font-family: "Scada", sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+
+}
+nav ul{
+  list-style: none;
+}
+nav ul li{
+  float: right;
+ }
+nav ul li.info{
+  float: right;
+  margin-right: 85.5px;
+}
+nav ul li a:hover {
+  color: #dddddd;
+}
+nav ul li.logo{
+  float: left;
+  display: inline-block;
+  /* margin-top: 6.3vh;
+  margin-left: 2vw; */
+  margin: 50px 50px 50px 15px;
+  /* font-size: 2.5vw; */
+  font-size: 3.8vh;
+  color: #444444;
+}
+nav a{
+  text-decoration: none;
+  color: #ee6c52;
+  font-size: 25px;
+  /* font-size: 1.8vw; */
+  display: block;
+  /* margin-top: 6vh;
+  margin-right: 3vw; */
+  /* margin: 8vh 4vw 8vh 2.5vw; */
+  margin: 55px 55px 55px 35.5px;
+}
+nav i{
+  display: inline-block;
+  float: left;
+  /* margin-top: 5vh;
+  margin-left: 2vw; */
+  margin: 35.5px 0px 0px 35.5px;
+  font-size: 8vh;
+  color: #ee6c52;
 }

@@ -8,8 +8,8 @@
     <script type="text/javascript" src="../scripts/mapScript.js"></script>
     <script type="text/javascript" src="../scripts/time.js"></script>
     <script type="text/javascript" src="../scripts/escape.js">
-
     </script>
+    <script src="https://kit.fontawesome.com/f5a30c435a.js"></script>
     <!-- Maps API link -->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmVCl0OPzV0a5jSGpdBmPjY2t7jJd85_o&callback=initMap"></script>
@@ -17,25 +17,39 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <div class="header">
+    <!-- <div class="header">
       <div id="logo">
         <span id="circle"></span>
+        <i class="fas fa-circle fa-4x"></i>
         <h1> whee// </h1>
       </div>
       <div class="name">
-        <h2> good afternoon, {{email}}</h2>
+        <h2> good afternoon, </h2>
         <h4 id="date"></h4>
         <h4 id="time"></h4>
         <button id="logout" type="submit" name="logout">logout</button>
       </div>
-    </div>
+    </div> -->
+
+    <nav>
+      <ul>
+        <li class="info"><div class="name">
+          <h2> good afternoon, </h2>
+          <h4 id="date"></h4>
+          <h4 id="time"></h4>
+          <button id="logout" type="submit" name="logout">logout</button>
+        </div></li>
+        <i class="fas fa-circle"></i>
+        <li class="logo">whee//</li>
+      </ul>
+    </nav>
 
     <div class="mainBody">
-      <form method="post">
-        <label for="user_selected_place">where would you like to go ?</label> <br>
+      <form class="mainForm" method="post">
+        <label for="user_selected_place">where would you like to go?</label> <br>
         <div class="buttons">
           <select name="place">
-            <option id="hold" value="hold">Please Select a Place</option>
+            <option id="hold" value="hold">select</option>
             <option value="Space Needle">Space Needle</option>
             <option value="Museum of Pop Culture">Museum of Pop Culture</option>
             <option value="Pike Place">Pike Place Market</option>
@@ -47,7 +61,7 @@
             <option value="Seattle Art Museum">Seattle Art Museum</option>
           </select>
 
-          <button id="submit" type="button" name="submit"   onclick="document.getElementById('window-pop').style.display='block'"> Search </button>
+          <button id="submit" type="button" name="submit"   onclick="document.getElementById('window-pop').style.display='block'"> search </button>
 
         </div>
       </form>
