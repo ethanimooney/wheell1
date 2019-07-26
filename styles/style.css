@@ -28,7 +28,10 @@ nav ul li a:hover {
 nav ul li.logo{
   float: left;
   display: block;
+  /* margin-top: 6.3vh;
+  margin-left: 2vw; */
   margin: 50px 50px 50px 15px;
+  /* font-size: 2.5vw; */
   font-size: 35px;
   color: #444444;
 }
@@ -36,12 +39,18 @@ nav a{
   text-decoration: none;
   color: #ee6c52;
   font-size: 25px;
+  /* font-size: 1.8vw; */
   display: block;
+  /* margin-top: 6vh;
+  margin-right: 3vw; */
+  /* margin: 8vh 4vw 8vh 2.5vw; */
   margin: 55px 55px 55px 35.5px;
 }
 nav i{
   display: block;
   float: left;
+  /* margin-top: 5vh;
+  margin-left: 2vw; */
   margin: 35.5px 0px 0px 35.5px;
   color: #ee6c52;
 }
@@ -63,7 +72,8 @@ h4{
   color: #dddddd;
   text-align: right;
   font-weight: 400;
-  padding: 10px 0;
+  font-size: 1.1vw;
+  padding: 1.5vh 0;
 }
 
 
@@ -74,7 +84,7 @@ h4{
   display: flex;
   align-content: center;
   justify-content: center;
-  height: 85vh;
+  height: 100%;
   background-color: #dddddd;
 
   /* background-image: url("/images/happy_4.jpg");
@@ -106,34 +116,34 @@ h4{
   align-items: left;
   text-align: left;
 }
-.a h1{
+/* .a h1{
   font-weight: 700i;
-  padding: 5.458515283842795vh;
+  padding: 5.5vh;
   font-size: 40px;
   color: white;
   text-align: left;
-}
+} */
 .a h2{
   font-weight: 700i;
-  padding: 30px 10px 20px 30px;
-  font-size: 65px;
+  padding: 5vh 2.3vw 4vh 2.3vw;
+  font-size: 4.5vw;
   color: white;
 }
-.a h3{
+/* .a h3{
   font-weight: 400i;
   padding: 50px 10px 20px 30px;
   font-size: 65px;
   color: white;
-}
+} */
 .a p{
-  padding: 2.183406113537118vh 1.091703056768559vh 1.091703056768559vh 5.458515283842795vh;
+  padding: 2.1vh 1.1vh 1.1vh 5.5vh;
   font-weight: 400;
-  font-size: 20px !important;
+  font-size: 1.4vw !important;
   color: #444444;
   text-align: right;
 }
 .a i{
-  padding: 0 0 0 0;
+  padding: 0;
   color: white;
 }
 .imageText{
@@ -174,9 +184,13 @@ h4{
 .signup{
   background-color: white;
   border-radius: 20px;
-  padding: 3.2751091703056767vh 4.366812227074236vh 3.2751091703056767vh 3.2751091703056767vh;
+  padding: 3.3vh 2.4vw 3.3vh 2.4vw;
   height: .5fr;
   width: .75fr;
+}
+
+#know_each{
+  font-size: 1.9vw;
 }
 
 
@@ -200,8 +214,8 @@ button:focus {
   border-radius: 20px;
   background-color: #dddddd;
   border: none;
-  margin: 0.8733624454148472vh 0.5952380952380952vw 0.8733624454148472vh 0px;
-  padding: 1.091703056768559vh 0.5952380952380952vw 1.091703056768559vh 0;
+  margin: 0.9vh 0.6vw 0.8vh 0vw;
+  padding: 1.1vh 0.6vw 1.1vh 0vw;
 }
 
 .error {
@@ -210,7 +224,7 @@ button:focus {
 
 .error-message {
 	color: #ee6c52;
-  font-size: 10px;
+  font-size: 0.7vw;
 	font-style: italic;
   font-weight: 400;
 	margin-bottom: 1em;
@@ -224,8 +238,8 @@ button:focus {
    border-radius: 20px;
    background-color: #444444;
    border: none;
-   margin: 0.8733624454148472vh 0.5952380952380952vw 0.8733624454148472vh 0px;
-   padding: 1.091703056768559vh 0.5952380952380952vw 1.091703056768559vh 0;
+   margin: 0.9vh 0.6vw 0.8vh 0vw;
+   padding: 1.1vh 0.7vw 1.1vh 0vw;
 }
 .signupForm input:hover {
       border:none;
@@ -240,11 +254,11 @@ button:focus {
   font-weight: 700;
   background-color: #ee6c52;
   color: white;
-  padding: 1.091703056768559vh  1.1904761904761905vw 1.091703056768559vh  1.1904761904761905vw;
+  padding: 1.1vh  1.2vw 1.1vh  1.2vw;
   border-radius: 20px;
   float: right;
   border: none;
-  margin-top: 10px;
+  margin-top: 1.3vh;
 }
  button:hover{
   background-color: #444444;
