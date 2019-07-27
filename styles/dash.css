@@ -51,6 +51,7 @@ h1{
 }
 
 .name{
+  color: #444444;
   position: inherit;
   top: 0vh;
   right: 5vw;
@@ -177,7 +178,7 @@ button:focus {
   top: 20vh;
   left: 2.4vw;
   /* properties of the map */
-  height: 75%;
+  height: 55%;
   width: 95%;
   border-radius: 20px;
 }
@@ -281,7 +282,7 @@ nav a{
   /* margin-top: 6vh;
   margin-right: 3vw; */
   /* margin: 8vh 4vw 8vh 2.5vw; */
-  margin: 55px 55px 55px 35.5px;
+  margin: 55px 55px 55px 0px;
 }
 nav i{
   display: inline-block;

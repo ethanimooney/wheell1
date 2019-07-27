@@ -35,7 +35,8 @@ class MainHandler(webapp2.RequestHandler):
             userLib['email'] =  User(firstName=firstNameInput, lastName=lastNameInput, email=emailInput, password=passwordInput).put()
 
         queryLib = {
-            "firstNameQuery": User.query().filter(User.email == 'ethanimooney@gmail.com').fetch()
+                                                        # TODO: make this get current logged in user
+            "firstNameQuery": User.query().filter(User.email == "ethanimooney@gmail.com").fetch()[0].firstName
         }
 
         self.response.write(dash_template.render(queryLib))

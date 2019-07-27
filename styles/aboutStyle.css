@@ -7,7 +7,6 @@
 /* Nav bar Styling */
 
 nav{
-  z-index: 10;
   margin: 0 0 0 0;
   font-family: "Scada", sans-serif;
   font-weight: bold;
@@ -23,17 +22,21 @@ nav ul{
 nav ul li{
   float: right;
  }
+nav ul li.info{
+  float: right;
+  margin-right: 85.5px;
+}
 nav ul li a:hover {
-  color: #444444;
+  color: #dddddd;
 }
 nav ul li.logo{
   float: left;
-  display: block;
+  display: inline-block;
   /* margin-top: 6.3vh;
   margin-left: 2vw; */
   margin: 50px 50px 50px 15px;
   /* font-size: 2.5vw; */
-  font-size: 35px;
+  font-size: 3.8vh;
   color: #444444;
 }
 nav a{
@@ -48,11 +51,12 @@ nav a{
   margin: 55px 55px 55px 0px;
 }
 nav i{
-  display: block;
+  display: inline-block;
   float: left;
   /* margin-top: 5vh;
   margin-left: 2vw; */
   margin: 35.5px 0px 0px 35.5px;
+  font-size: 8vh;
   color: #ee6c52;
 }
 
