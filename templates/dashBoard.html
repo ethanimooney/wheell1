@@ -16,15 +16,16 @@
 
     <title>whee//dashboard</title>
   </head>
-  <body>
-
+  <body method="get">
     <nav>
       <ul>
         <li class="info"><div class="name">
+
           <h2 id="timeOfDay"></h2>
+
           <h4 id="date"></h4>
           <h4 id="time"></h4>
-          <form id="margins" action="/logout" method="post">
+          <form id="margins" action="/login" method="get">
             <button id="logout" type="submit" name="logout"> logout </button>
           </form>
         </div></li>
