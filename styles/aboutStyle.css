@@ -23,6 +23,7 @@ nav ul li{
   float: right;
  }
 nav ul li.info{
+  display: block;
   float: right;
   margin-right: 85.5px;
 }
@@ -31,31 +32,22 @@ nav ul li a:hover {
 }
 nav ul li.logo{
   float: left;
-  display: inline-block;
-  /* margin-top: 6.3vh;
-  margin-left: 2vw; */
-  margin: 50px 50px 50px 15px;
-  /* font-size: 2.5vw; */
-  font-size: 3.8vh;
+  display: block;
+  margin: 5.5vh 3vw 5.5vh .9vw;
+  font-size: 35px;
   color: #444444;
 }
 nav a{
   text-decoration: none;
   color: #ee6c52;
   font-size: 25px;
-  /* font-size: 1.8vw; */
   display: block;
-  /* margin-top: 6vh;
-  margin-right: 3vw; */
-  /* margin: 8vh 4vw 8vh 2.5vw; */
-  margin: 55px 55px 55px 0px;
+  margin: 55px 55px 3.3vw 0px;
 }
 nav i{
-  display: inline-block;
+  display: block;
   float: left;
-  /* margin-top: 5vh;
-  margin-left: 2vw; */
-  margin: 35.5px 0px 0px 35.5px;
+  margin: 3.9vh 0 0 2.1vw;
   font-size: 8vh;
   color: #ee6c52;
 }
@@ -74,10 +66,10 @@ h2{
   text-align: right;
 }
 h4{
-  color: #dddddd;
+  color: #ee6c52;
   text-align: right;
-  font-weight: 400;
-  font-size: 1.1vw;
+  font-weight: 700;
+  font-size: 2vw;
   padding: 1.5vh 0;
 }
 
@@ -90,7 +82,6 @@ h4{
   height: 100%;
   background-color: #dddddd;
 }
-
 .row {
   display: flex;
   flex-direction: row;
@@ -105,10 +96,11 @@ h4{
 }
 .a {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-basis: 100%;
   flex: 1.25;
   align-items: left;
+
   text-align: left;
 }
 .a p{
@@ -118,11 +110,38 @@ h4{
   color: #444444;
   text-align: left;
 }
+.a i{
+  padding: 0;
+  color: white;
+}
+.imageText{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  flex: .5;
+}
+#access_icon{
+  z-index: 0;
+  font-size: 30vw;
+  margin-left: -10vw;
+  margin-top: 0;
+}
 .paragraphText{
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 6vh 1.1vh 6vh 2.3vw;
+}
+.paragraphText p{
+  font-weight: 400;
+  margin: auto;
+  
+  text-align: left;
 }
 .b{
   display: flex;
@@ -131,14 +150,74 @@ h4{
   flex-basis: 100%;
   flex: 1;
 }
-.signup{
+.creators{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: 1;
   margin-top: 75px;
+  margin-bottom: 75px;
   background-color: white;
   border-radius: 20px;
-  padding: 3.3vh 2.4vw 3.3vh 2.4vw;
-  height: .5fr;
-  width: .75fr;
+  padding: 1.8vh 0 1.8vh 2.4vw;
+  height: 469px;
+  width: 569px;
 }
+.creators p{
+  text-align: right;
+  color: #dddddd;
+  font-weight: 400;
+ font-size: 2.7vh;
+}
+.bio{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: .75;
+}
+.images{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: .25;
+}
+.image1{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.image2{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.image3{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.image1 img{
+  height: 9.3vh;
+  width: 5vw;
+  border-radius: 109vh;
+  margin: auto auto auto auto;
+}
+.image2 img{
+  height: 9.3vh;
+  width: 5vw;
+  border-radius: 109vh;
+  margin: auto auto auto auto;
+}
+.image3 img{
+  height: 9.3vh;
+  width: 5vw;
+  border-radius: 109vh;
+  margin: auto auto auto auto;
+}
+
 
 #know_each{
   font-size: 1.9vw;

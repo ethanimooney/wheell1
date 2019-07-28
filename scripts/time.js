@@ -7,13 +7,13 @@ window.onload = function timeAndDate(){
   var s = d.getSeconds();
 
   if (h >= 6 && h < 12){
-    document.getElementById("timeOfDay").innerHTML = "good morning, ";
-  } else if (h >= 12 && h < 17){
-    document.getElementById("timeOfDay").innerHTML = "good afternoon, ";
-  } else if (h >= 17 && h < 24){
-    document.getElementById("timeOfDay").innerHTML = "good evening, ";
+    document.getElementById("timeOfDay").innerHTML = "good morning";
+  } else if (h >= 12 && h < 18){
+    document.getElementById("timeOfDay").innerHTML = "good afternoon";
+  } else if (h >= 18 && h < 24){
+    document.getElementById("timeOfDay").innerHTML = "good evening";
   } else if (h >= 24 && h < 6){
-    document.getElementById("timeOfDay").innerHTML = "good night, ";
+    document.getElementById("timeOfDay").innerHTML = "good night";
   }
   // connects to the HTML IDs to print out the date and the time
 
