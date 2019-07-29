@@ -1,7 +1,7 @@
 function initMap() {
   var center = {lat: 47.6062, lng: -122.3321};
   //folder with the different pinpoints
-  var iconBase = '/../markers/';
+  var iconBase = '../markers/';
       //a dictionary of the icons
        var icons = {
          red: {
