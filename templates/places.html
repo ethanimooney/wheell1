@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place ID Finder</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script src="../scripts/places.js"></script>
+    <link rel="stylesheet" href="../styles/places.css">
+  </head>
+  <body>
+    <input id="pac-input"
+           class="controls"
+           type="text"
+           placeholder="Enter a location">
+    <div id="map"></div>
+    <div id="infowindow-content">
+        <span id="place-name" class="title"></span><br>
+        <strong>Place ID:</strong> <span id="place-id"></span><br>
+        <span id="place-address"></span>
+    </div>
+
+    <div id="results">
+      The results go here
+      <ul id = "resultlist">
+      <ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmVCl0OPzV0a5jSGpdBmPjY2t7jJd85_o&libraries=places&callback=initMap"
+        async defer></script>
+  </body>
+</html>

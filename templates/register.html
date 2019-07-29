@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="../styles/registerStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Scada:400,400i,700,700i&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1.4.5/dist/bouncer.polyfills.min.js"></script>
+    <script src="https://kit.fontawesome.com/f5a30c435a.js"></script>
+    <script src="/scripts/script.js"></script>
+    <meta charset="utf-8">
+    <link rel='icon' href='/images/circle_favicon.png' type='image/png'/ >
+    <title>whee//</title>
+  </head>
+  <nav>
+    <ul>
+      <li><a href="/">home</a></li>
+      <i class="fas fa-circle fa-4x"></i>
+      <li class="logo">whee//</li>
+    </ul>
+  </nav>
+  <body>
+    <div class="main">
+      <div class="container">
+          <div class="box a">
+            <div class="imageText">
+              <h1><i id="wheel_chair"class="fas fa-users"></i></h1>
+            </div>
+            <div class="paragraphText">
+              <div class="headText">
+                <h2>let's get to know each other.</h2>
+              </div>
+
+            </div>
+            </div>
+        <div class="box b">
+          <div class="signup">
+            <h2 id="know_each">create a wheell account now</h2>
+            <h4>tell us about yourself.</h4>
+            <form class="signupForm" class="validate-me" id="validate-me" method="post" data-validate>
+              <input type="text" name="firstName" value="" placeholder="first name" required>
+              <input type="text" name="lastName" value="" placeholder="last name" required>
+              <input type="email" name="email" value="" placeholder="email" required>
+
+              <h4>must contain 1 upper, 1 lower, 1 number, and be > 8 in length.</h4>
+              <input type="password" name="password" id="password" placeholder="password" minlength="8" data-bouncer-message="Please choose a password that includes at least 1 upper, 1 lower, and 1 number." pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+              <input type="password" name="confirm-password" id="confirm-password" placeholder="repeat password" data-bouncer-match="#password" data-bouncer-mismatch-message="Your passwords do not match." required>
+
+              <button type="submit" name="signUpButton">let's go</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+<!-- Form Validation Link - leave here -->
+<script>
+			var bouncer = new Bouncer('[data-validate]', {
+				disableSubmit: true,
+				customValidations: {
+					valueMismatch: function (field) {
+						// Look for a selector for a field to compare
+						// If there isn't one, return false (no error)
+						var selector = field.getAttribute('data-bouncer-match');
+						if (!selector) return false;
+						// Get the field to compare
+						var otherField = field.form.querySelector(selector);
+						if (!otherField) return false;
+						// Compare the two field values
+						// We use a negative comparison here because if they do match, the field validates
+						// We want to return true for failures, which can be confusing
+						return otherField.value !== field.value;
+					}
+				},
+				messages: {
+					valueMismatch: function (field) {
+						var customMessage = field.getAttribute('data-bouncer-mismatch-message');
+						return customMessage ? customMessage : 'Please make sure the fields match.'
+					}
+				}
+			});
+			document.addEventListener('bouncerFormInvalid', function (event) {
+				console.log(event.detail.errors);
+				console.log(event.detail.errors[0].offsetTop);
+				window.scrollTo(0, event.detail.errors[0].offsetTop);
+			}, false);
+			document.addEventListener('bouncerFormValid', function () {
+        document.forms[0].submit();
+			}, false);
+		</script>
+
+</html>

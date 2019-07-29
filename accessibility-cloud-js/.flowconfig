@@ -1,0 +1,16 @@
+[include]
+
+[libs]
+flow-typed
+
+[options]
+# Absolute path support:
+# e.g. "/collections/todos"
+module.name_mapper='^\/\(.*\)$' -> '<PROJECT_ROOT>/\1'
+# module.name_mapper='.*\.html$' -> 'empty/object'
+module.name_mapper='.*\.css$' -> 'empty/object'
+
+[ignore]
+# This package can give you a lot of flow errors, better ignore it
+.*/node_modules/fbjs/.*
+fbjs/.*

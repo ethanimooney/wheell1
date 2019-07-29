@@ -1,0 +1,261 @@
+*{
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Nav bar Styling */
+
+nav{
+  margin: 0 0 0 0;
+  font-family: "Scada", sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+
+}
+nav ul{
+  list-style: none;
+}
+nav ul li{
+  float: right;
+ }
+nav ul li.info{
+  display: block;
+  float: right;
+  margin-right: 85.5px;
+}
+nav ul li a:hover {
+  color: #dddddd;
+}
+nav ul li.logo{
+  float: left;
+  display: block;
+  margin: 5.5vh 3vw 5.5vh .9vw;
+  font-size: 35px;
+  color: #444444;
+}
+nav a{
+  text-decoration: none;
+  color: #ee6c52;
+  font-size: 25px;
+  display: block;
+  margin: 55px 55px 3.3vw 0px;
+}
+nav i{
+  display: block;
+  float: left;
+  margin: 3.9vh 0 0 2.1vw;
+  font-size: 8vh;
+  color: #ee6c52;
+}
+
+/* Main Div and Body Styling */
+
+div.main{
+  font-family: "Scada", sans-serif;
+  font-weight: 700;
+}
+body{
+  background-color: #444444;
+}
+h2{
+  color: #444444;
+  text-align: right;
+}
+h4{
+  color: #dddddd;
+  text-align: right;
+  font-weight: 400;
+  font-size: 1.1vw;
+  padding: 1.5vh 0;
+}
+
+/* Main Page Content FlexBox Styling */
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #dddddd;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.a {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: 1.25;
+
+  /* background-color: white;
+  border-radius: 20px; */
+  align-items: left;
+  text-align: left;
+}
+.a h2{
+  font-weight: 700i;
+  padding: 5vh 1.1vh 5vh 2.3vw;
+  font-size: 4.5vw;
+  color: white;
+}
+
+.a p{
+  padding: 2.1vh 1.1vh 1.1vh 5.5vh;
+  font-weight: 400;
+  font-size: 1.4vw !important;
+  color: #444444;
+  text-align: right;
+}
+.a i{
+  padding: 0;
+  color: white;
+}
+.imageText{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: .5;
+}
+
+#wheel_chair{
+  z-index: 0;
+  font-size: 30vw;
+  margin-left: -6vw;
+  margin-top: 5.8vh;
+
+}
+
+/* .fas{
+  z-index: -3;
+  font-size: 40vw;
+  margin-left: 4vw;
+  padding-top: -4vh;
+} */
+
+.paragraphText{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: .5;
+  margin: auto;
+}
+.actualParagraph{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: .5;
+}
+.headText{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: .5;
+}
+.b{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  /* background-image: url("/images/happy_4.jpg");
+  background-repeat: no-repeat;
+  background-size: auto auto; */
+}
+.signup{
+  margin-top: 8.2vh;
+  margin-bottom: 8.2vh;
+  background-color: white;
+  border-radius: 20px;
+  padding: 3.3vh 2.4vw 3.3vh 2.4vw;
+  height: .5fr;
+  width: .75fr;
+}
+
+#know_each{
+  font-size: 1.9vw;
+}
+
+/* Sign up form Styling */
+
+form .signupForm{
+  color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.signupForm input{
+  color: white;
+  width: 100%;
+  text-align: right;
+  border-radius: 20px;
+  background-color: #dddddd;
+  border: none;
+  margin: 0.9vh 0.6vw 0.8vh 0vw;
+  padding: 1.1vh 0.6vw 1.1vh 0vw;
+}
+
+.error {
+	border-color: #ee6c52;
+}
+
+.error-message {
+	color: #ee6c52;
+  font-size: 0.7vw;
+	font-style: italic;
+  font-weight: 400;
+	margin-bottom: 1em;
+  text-align: right;
+}
+
+ input:focus {
+   color: white;
+   width: 100%;
+   text-align: right;
+   border-radius: 20px;
+   background-color: #444444;
+   border: none;
+   margin: 0.9vh 0.6vw 0.8vh 0vw;
+   padding: 1.1vh 0.7vw 1.1vh 0vw;
+}
+.signupForm input:hover {
+      border:none;
+      background-color: #444444;
+      color: white;
+}
+::placeholder{
+  color: white;
+  padding: 0 0 0 0;
+}
+.signupForm button{
+  font-weight: 700;
+  background-color: #ee6c52;
+  color: white;
+  padding: 1.1vh  1.2vw 1.1vh  1.2vw;
+  border-radius: 20px;
+  float: right;
+  border: none;
+  margin-top: 1.3vh;
+}
+ button:hover{
+  background-color: #444444;
+}

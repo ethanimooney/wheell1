@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tag above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>accessibility.cloud JS example application</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+      body {
+        margin: 2em;
+        padding: 0;
+        font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>accessibility.cloud JS example application</h1>
+
+    <p>This is an example of how to use accessibility.cloud's JS API. You can find the relevant files for integrating this widget <a href='https://github.com/sozialhelden/accessibility-cloud-js'>on Github</a>.</p>
+
+    <p>Below you should see a list of locations around Paris, France. For testing localization of the widget, the German version of the widget is shown.</p>
+
+    <!-- This is a placeholder element that will contain the widget later. -->
+    <div id="root"></div>
+
+    <script type="text/javascript">
+      window.onAccessibilityCloudLoaded = function (AccessibilityCloud) {
+        var element = document.querySelector('#root');
+        AccessibilityCloud.render(element, {
+          token: '11abe59ec926dfc81926545400f9f2b5', // <-- Replace this token with your own
+            locale: 'de_DE', // <-- Replace this with the locale you want to use
+            requestParameters: {
+              latitude: 48.866667,
+              longitude: 2.333333,
+              accuracy: 10000,
+              limit: 100,
+            },
+        });
+      };
+    </script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start`.
+      To create a production bundle, use `npm run build`.
+    -->
+  </body>
+</html>

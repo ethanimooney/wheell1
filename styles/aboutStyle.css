@@ -1,0 +1,226 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav bar Styling */
+
+nav{
+  margin: 0 0 0 0;
+  font-family: "Scada", sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+
+}
+nav ul{
+  list-style: none;
+}
+nav ul li{
+  float: right;
+ }
+nav ul li.info{
+  display: block;
+  float: right;
+  margin-right: 85.5px;
+}
+nav ul li a:hover {
+  color: #dddddd;
+}
+nav ul li.logo{
+  float: left;
+  display: block;
+  margin: 5.5vh 3vw 5.5vh .9vw;
+  font-size: 35px;
+  color: #444444;
+}
+nav a{
+  text-decoration: none;
+  color: #ee6c52;
+  font-size: 25px;
+  display: block;
+  margin: 55px 55px 3.3vw 0px;
+}
+nav i{
+  display: block;
+  float: left;
+  margin: 3.9vh 0 0 2.1vw;
+  font-size: 8vh;
+  color: #ee6c52;
+}
+
+/* Main Div and Body Styling */
+
+div.main{
+  font-family: "Scada", sans-serif;
+  font-weight: 700;
+}
+body{
+  background-color: #444444;
+}
+h2{
+  color: #444444;
+  text-align: right;
+}
+h4{
+  color: #ee6c52;
+  text-align: right;
+  font-weight: 700;
+  font-size: 2vw;
+  padding: 1.5vh 0;
+}
+
+/* Main Page Content FlexBox Styling */
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #dddddd;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.a {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: 1.25;
+  align-items: left;
+
+  text-align: left;
+}
+.a p{
+  padding: 2.1vh 1.1vh 1.1vh 5.5vh;
+  font-weight: 400;
+  font-size: 1.4vw !important;
+  color: #444444;
+  text-align: left;
+}
+.a i{
+  padding: 0;
+  color: white;
+}
+.imageText{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  flex: .5;
+}
+#access_icon{
+  z-index: 0;
+  font-size: 30vw;
+  margin-left: -10vw;
+  margin-top: 0;
+}
+.paragraphText{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 6vh 1.1vh 6vh 2.3vw;
+  line-height: 1.85;
+}
+.paragraphText p{
+  font-weight: 400;
+  margin: auto;
+  line-height: 1.5;
+
+  text-align: left;
+}
+.b{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.creators{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: 1;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 1.8vh 0 1.8vh 2.4vw;
+  height: 469px;
+  width: 569px;
+}
+.creators p{
+  text-align: right;
+  color: #dddddd;
+  font-weight: 400;
+ font-size: 2.5vh;
+ line-height: 1.85;
+}
+.bio{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: .75;
+}
+.images{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: .25;
+}
+.image1{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.image2{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.image3{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.image1 img{
+  height: 9.3vh;
+  width: 5vw;
+  border-radius: 109vh;
+  margin: auto auto auto auto;
+}
+.image2 img{
+  height: 9.3vh;
+  width: 5vw;
+  border-radius: 109vh;
+  margin: auto auto auto auto;
+}
+.image3 img{
+  height: 9.3vh;
+  width: 5vw;
+  border-radius: 109vh;
+  margin: auto auto auto auto;
+}
+
+
+#know_each{
+  font-size: 1.9vw;
+}

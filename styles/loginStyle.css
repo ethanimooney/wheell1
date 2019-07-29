@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+body{
+  background-color: #white;
+}
+div .main{
+  background-color: white;
+  width: 100%;
+}
+div .loginPane{
+  border: 1px solid #dddddd;
+  font-family: "Scada", sans-serif;
+  font-weight: 700;
+  height: 58.4vh;
+  width: 27.8vw;
+  /* height: 400px;
+  width: 400px; */
+  border-radius: 20px;
+  background-color: white;
+  color: #444444;
+  margin: 190px auto;
+  padding: 20px;
+  text-align: center;
+}
+div h1{
+  text-align: center;
+  color: #444444;
+  padding: 10px;
+}
+#title{
+  font-size: 2.5vw;
+}
+div p{
+  padding-top: 5.5vh;
+  /* font-size: 15px; */
+  font-size: 1.1vw;
+  font-weight: 400;
+  text-align: center;
+  color: #dddddd;
+}
+div p a{
+  text-decoration: none;
+  color: #ee6c52;
+}
+div p a:hover{
+  text-decoration: none;
+  color: #444444;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+form .loginForm{
+  color: white;
+}
+.loginForm input{
+  color: white;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #dddddd;
+  border: none;
+  font-size: 0.8vw;
+  /* margin: 20px 0px 20px 0px; */
+  margin: 3vh 0px 3vh 0px;
+  /* padding: 20px 0px 20px 0px; */
+  padding: 3vh 0px 3vh 0px;
+}
+
+.loginForm input:focus {
+    outline: none !important;
+    border: none;
+    background-color: #444444;
+    color: white;
+    margin: 3vh 0px 3vh 0px;
+    padding: 3vh 0px 3vh 0px;
+    box-sizing: border-box;
+}
+.loginForm input:hover {
+      border:none;
+      background-color: #444444;
+      color: white;
+}
+::placeholder{
+  color: white;
+  padding: 0 0 0 0;
+}
+
+.loginForm button{
+  font-weight: 700;
+  background-color: #ee6c52;
+  color: white;
+  padding: 1.4vh 1.7vw 1.4vh 1.7vw;
+  margin-top: 1.4vh;
+  margin-bottom: -1.4vh;
+  border-radius: 20px;
+
+  border: none;
+  text-align: center;
+  font-size: 0.8vw;
+}
+ button:hover{
+  background-color: #444444;
+}
+.error {
+	border-color: #ee6c52;
+}
+
+.error-message {
+	color: #ee6c52;
+  font-size: 10px;
+	font-style: italic;
+  font-weight: 400;
+	margin-bottom: .5em;
+  text-align: center;
+}

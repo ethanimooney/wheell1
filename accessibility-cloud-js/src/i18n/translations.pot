@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: src/App.jsx:108
+#: src/App.jsx:109
+#: src/App.jsx:110
+#: src/App.jsx:122
+#: src/App.jsx:126
+msgid "No results."
+msgstr ""
+
+#: src/App.jsx:109
+#: src/App.jsx:110
+#: src/App.jsx:111
+#: src/App.jsx:123
+#: src/App.jsx:127
+msgid "Loading..."
+msgstr ""
+
+#: src/components/Result.jsx:102
+#: src/components/Result.jsx:107
+#: src/components/Result.jsx:109
+msgid "Category"
+msgstr ""
+
+#: src/components/XHRComponent.jsx:82
+msgid "HTTP error from server."
+msgstr ""
+
+#: src/model/PlaceInfo.js:66
+msgid "Accessible with wheelchair"
+msgstr ""
+
+#: src/model/PlaceInfo.js:67
+msgid "Partially accessible with wheelchair"
+msgstr ""
+
+#: src/model/PlaceInfo.js:68
+msgid "Not accessible with wheelchair"
+msgstr ""
+
+#: src/components/Distance.jsx:37
+msgid "meters"
+msgstr ""
+
+#: src/components/Distance.jsx:44
+msgid "yards"
+msgstr ""
+
+#: src/components/Distance.jsx:48
+msgid "miles"
+msgstr ""
+
+#: src/components/Distance.jsx:54
+msgid "Show on OpenStreetMap"
+msgstr ""
+
+#: src/components/Distance.jsx:55
+msgid "${ value } ${ unit } from here."
+msgstr ""
+
+#: src/components/AccessibilityDetails.jsx:16
+msgid "Yes"
+msgstr ""
+
+#: src/components/AccessibilityDetails.jsx:17
+msgid "No"
+msgstr ""
+
+#: src/components/InfoPageLink.jsx:18
+msgid "Show ‘${ props.properties.name }’ on ${ sourceName }"
+msgstr ""
+
+#: src/components/ResultsList.jsx:41
+msgid "Sources:"
+msgstr ""

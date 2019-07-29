@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="../styles/loginStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Scada:400,400i,700,700i&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1.4.5/dist/bouncer.polyfills.min.js"></script>
     <script src="/scripts/script.js"></script>
     <meta charset="utf-8">
-    <title></title>
+    <link rel='icon' href='/images/circle_favicon.png' type='image/png'/>
+    <title>whee//login</title>
   </head>
   <body>
-
+    <div class="main">
+        <div class="loginPane">
+          <p>log into</p>
+          <h1 id="title">whee//</h1>
+          <div class="loginFormDiv">
+            <form class="loginForm" method="post" action="/dashboard">
+              <input type="email" name="username" placeholder="email" required>
+              <input type="password" name="password" placeholder="password" required>
+              <button type="submit" name="loginSubmitButton">login</button>
+            </form>
+            <p class="thin">don't have an account? <a href="/">sign up</a>.</p>
+          </div>
+        </div>
+    </div>
   </body>
+
+  <script> var validate = new Bouncer('form'); </script>
+
 </html>
