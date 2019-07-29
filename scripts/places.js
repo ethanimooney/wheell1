@@ -11,6 +11,7 @@ function initMap(){
    console.log("Input: " + input);
 
    var autocomplete = new google.maps.places.Autocomplete(input);
+   console.log(autocomplete);
    autocomplete.bindTo('bounds', map);
 
    // Specify just the place data fields that you need.
@@ -52,10 +53,9 @@ function initMap(){
 
      marker.setVisible(true);
 
-     infowindowContent.children['place-name'].textContent = place.name;
+    infowindowContent.children['place-name'].textContent = place.name;
     infowindowContent.children['place-id'].textContent = place.place_id;
-    infowindowContent.children['place-address'].textContent =
-        place.formatted_address;
+    infowindowContent.children['place-address'].textContent =  place.formatted_address;
     infowindow.open(map, marker);
 
      // @@@ set the lat and long
@@ -65,9 +65,10 @@ function initMap(){
 
      findAccessibilityResults(thePlaceLatitude, thePlaceLongitude, 1000);
   });
+  console.log(name);
 }
 
- function findAccessibilityResults(lat, lng, accuracy) {
+function findAccessibilityResults(lat, lng, accuracy) {
   let appToken = "1ca3179662ad6d3cb237cdee41265a58";
   let accessibilityUrl = "https://accessibility-cloud.freetls.fastly.net/place-infos.json?appToken=" + appToken +
     "&latitude=" + lat + "&longitude=" + lng + "&accuracy=" + accuracy + "&limit=1";
@@ -76,10 +77,10 @@ function initMap(){
    $.get(accessibilityUrl, null, processResponse);
 }
 
- function processResponse(response) {
+function processResponse(response) {
   console.log(response);
 
-   for(let i = 0; i < response.features.length; i++) {
+  for(let i = 0; i < response.features.length; i++) {
     let feature = response.features[i];
     let lng = feature.geometry.coordinates[0];
     let lat = feature.geometry.coordinates[1];
@@ -89,7 +90,15 @@ function initMap(){
     let website = feature.properties.placeWebsiteUrl;
     let accessibility = feature.properties.accessibility.accessibleWith.wheelchair;
     let category = feature.properties.category;
-    let result = "name=" + name + ", category=" + category + ", address= " + address + ", website=" + website + ", wheelchair accessibility=" + accessibility;
-    $("#resultlist").append('<li> ' + result + '</ul>');
+    let printWheelAcc = "wheelchair accessibility = " + accessibility;
+    let printName = "Name = " + name;
+    // let result = "name=" + name + ", category=" + category + ", address= " + address + ", website=" + website + ", wheelchair accessibility=" + accessibility;
+    $("#resultlist").append('<ul> ' + printName + '</ul>');
+    $("#resultlist").append('<ul> ' + printWheelAcc + '</ul>').css("text-shadow", "0.1vw 0.1vh 9px white")
+    if(accessibility == true){
+      $("#listBox").css("background-color", "#00cc00");
+    }else if(accessibility == false){
+      $("#listBox").css("background-color", "#ff0000");
+    }
   }
 }
