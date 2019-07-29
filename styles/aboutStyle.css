@@ -1,7 +1,6 @@
 *{
   margin: 0;
   padding: 0;
-  line-height: 1;
 }
 
 /* Nav bar Styling */
@@ -136,11 +135,13 @@ h4{
   align-items: center;
   justify-content: center;
   padding: 6vh 1.1vh 6vh 2.3vw;
+  line-height: 1.85;
 }
 .paragraphText p{
   font-weight: 400;
   margin: auto;
-  
+  line-height: 1.5;
+
   text-align: left;
 }
 .b{
@@ -167,7 +168,8 @@ h4{
   text-align: right;
   color: #dddddd;
   font-weight: 400;
- font-size: 2.7vh;
+ font-size: 2.5vh;
+ line-height: 1.85;
 }
 .bio{
   display: flex;

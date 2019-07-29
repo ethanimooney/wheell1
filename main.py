@@ -99,10 +99,10 @@ class DashHandler(webapp2.RequestHandler):
     def get(self):
         email = self.request.cookies.get('email')
         # if User.getEmail == email
-        dash_template = the_jinja_env.get_template("/templates/dashboard.html")
+        dash_template = the_jinja_env.get_template("/templates/dashBoard.html")
         self.response.write(dash_template.render())
     def post(self):
-        dash_template = the_jinja_env.get_template("/templates/dashboard.html")
+        dash_template = the_jinja_env.get_template("/templates/dashBoard.html")
         self.response.write(dash_template.render())
 
 class PopUpHandler(webapp2.RequestHandler):
