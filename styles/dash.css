@@ -101,12 +101,10 @@ h4{
 
 .mainBody{
   position: relative;
-  height: 130vh;
+  height: 110vh;
   top: 6vh;
   left: 0;
-  margin: 20px;
-  border: 2px solid #dddddd;
-  border-radius: 20px;
+  border-style: none;
   display: grid;
 }
 
@@ -117,17 +115,8 @@ label{
   font-size: 2vw;
 }
 
-form{
-  margin-top: 5vh;
-  margin-right: 3vw;
-  text-align: right;
-}
 
 /*********** the buttons where you can select the place and submit it ***********/
-.buttons{
-  position: relative;
-  top: 2vh;
-}
 
 input:focus,
 select:focus,
@@ -136,26 +125,10 @@ button:focus {
     outline: none;
 }
 
-.mainForm select{
-  border-style: none;
-  border-radius: 200px;
-  margin-right: 1em;
-  background-color: #ee6c52;
-
-  /* text */
-  color: white;
-  font-family: 'Scada';
-  font-weight: 700;
-  font-size: 1.1vw;
-  /* box size */
-  height: 3vh;
-  width: 89%;
-}
-#hold{
-  font-style: italic;
-}
-
 #submit{
+  position: absolute;
+  top: -3vh;
+  right: 5vw;
   height: 3vh;
   width: 6vw;
   font-family: 'Scada';
@@ -172,26 +145,62 @@ button:focus {
 }
 
 /*********** map ***********/
-#map {
+/* #map { */
   /* position of the map */
-  position: absolute;
+  /* position: absolute;
   margin-top: 5vh;
   top: 20vh;
-  left: 2.4vw;
+  left: 2.4vw; */
   /* properties of the map */
-  height: 55%;
+  /* height: 55%;
   width: 95%;
+  border-radius: 20px;
+} */
+
+/*********** map2 ***********/
+#mapdos{
+  position: absolute;
+  top: 2.5%;
+  width: 95%;
+  height: 95%;
+  left: 2.4vw;
   border-radius: 20px;
 }
 
-/*********** map2 ***********/
-#map2{
+.controls {
   position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 5vh;
-  left: 2.4vw;
+  height: 4vh;
+  top: 5%;
+  margin-left: 19vw;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 1vw;
+  font-weight: 300;
+
+  outline: none;
+  padding: 0 0.76vw 0 1vw;
+  text-overflow: ellipsis;
+  width: 27.7vw;
 }
+
+.controls:focus {
+  border-color: #4d90fe;
+}
+.title {
+  font-weight: bold;
+}
+#infowindow-content {
+  display: none;
+}
+#mapdos #infowindow-content {
+  display: inline;
+}
+
 
 /*********** pop up css ***********/
 

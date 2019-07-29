@@ -1,34 +1,35 @@
 let thePlaceLatitude = 0;
 let thePlaceLongitude = 0;
 
- function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+function initMap(){
+  var map = new google.maps.Map(document.getElementById('mapdos'), {
     center: {lat: 47.6062, lng: -122.3321},
     zoom: 13
   });
 
-   var input = document.getElementById('pac-input');
+  var input = document.getElementById('pac-input');
+   console.log("Input: " + input);
 
    var autocomplete = new google.maps.places.Autocomplete(input);
-  autocomplete.bindTo('bounds', map);
+   autocomplete.bindTo('bounds', map);
 
    // Specify just the place data fields that you need.
-  autocomplete.setFields(['place_id', 'geometry', 'name']);
+   autocomplete.setFields(['place_id', 'geometry', 'name']);
 
    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
    var infowindow = new google.maps.InfoWindow();
-  var infowindowContent = document.getElementById('infowindow-content');
-  infowindow.setContent(infowindowContent);
+   var infowindowContent = document.getElementById('infowindow-content');
+   infowindow.setContent(infowindowContent);
 
    var marker = new google.maps.Marker({map: map});
 
    marker.addListener('click', function() {
     infowindow.open(map, marker);
-  });
+    });
 
    autocomplete.addListener('place_changed', function() {
-    infowindow.close();
+     infowindow.close();
 
      var place = autocomplete.getPlace();
 
