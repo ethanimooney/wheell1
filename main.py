@@ -74,8 +74,11 @@ class PopUpHandler(webapp2.RequestHandler):
 
 class AboutHandler(webapp2.RequestHandler):
     def get(self):
+        login_vars = {
+            "login_url": users.create_login_url("/checkuser"),
+        }
         about_template = the_jinja_env.get_template("/templates/about.html")
-        self.response.write(about_template.render())
+        self.response.write(about_template.render(login_vars))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
