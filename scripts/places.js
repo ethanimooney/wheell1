@@ -1,13 +1,15 @@
 let thePlaceLatitude = 0;
 let thePlaceLongitude = 0;
 
+var input = "";
+
 function initMap(){
   var map = new google.maps.Map(document.getElementById('mapdos'), {
     center: {lat: 47.6062, lng: -122.3321},
     zoom: 13
   });
 
-  var input = document.getElementById('pac-input');
+  input = document.getElementById('pac-input');
    console.log("Input: " + input);
 
    var autocomplete = new google.maps.places.Autocomplete(input);
@@ -68,6 +70,28 @@ function initMap(){
   console.log(name);
 }
 
+
+
+
+
+
+
+
+function popMap(){
+
+
+  var address = $('#pac-input').val().replace(' ', '+');
+
+  $('#map').append('<iframe id="map" width="500" height="500" frameborder="0" style="border:0"src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB1ziyUz1bNBbMp_FYNearmctKuZYqVbmY&q=' + address + '" allowfullscreen></iframe>');
+}
+
+
+
+
+
+
+
+
 function findAccessibilityResults(lat, lng, accuracy) {
   let appToken = "1ca3179662ad6d3cb237cdee41265a58";
   let accessibilityUrl = "https://accessibility-cloud.freetls.fastly.net/place-infos.json?appToken=" + appToken +
@@ -93,12 +117,13 @@ function processResponse(response) {
     let printWheelAcc = "wheelchair accessibility = " + accessibility;
     let printName = "Name = " + name;
     // let result = "name=" + name + ", category=" + category + ", address= " + address + ", website=" + website + ", wheelchair accessibility=" + accessibility;
-    $("#resultlist").append('<ul> ' + printName + '</ul>');
-    $("#resultlist").append('<ul> ' + printWheelAcc + '</ul>').css("text-shadow", "0.1vw 0.1vh 9px white")
+    // $("#resultlist").append('<ul> ' + printName + '</ul>');
+    i+=1;
+    $("#resultlist").append('<ul> ' + printWheelAcc + '</ul>')
     if(accessibility == true){
-      $("#listBox").css("background-color", "#00cc00");
+      $("#listBox").css("background-color", "#7DCE82");
     }else if(accessibility == false){
-      $("#listBox").css("background-color", "#ff0000");
+      $("#listBox").css("background-color", "#ee6c52");
     }
   }
 }

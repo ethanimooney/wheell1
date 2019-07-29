@@ -12,11 +12,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmVCl0OPzV0a5jSGpdBmPjY2t7jJd85_o&libraries=places&callback=initMap" async defer></script>
 
-
-    <!-- Maps API link -->
-    <!-- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmVCl0OPzV0a5jSGpdBmPjY2t7jJd85_o&libraries=places&callback=initMap"></script> -->
-
     <title>whee//dashboard</title>
   </head>
   <body method="get">
@@ -38,7 +33,7 @@
     </nav>
 
     <div class="mainBody">
-      <button id="submit" type="button" name="submit"   onclick="document.getElementById('window-pop').style.display='block'"> search </button>
+      <button id="submit" type="button" name="submit"   onclick="document.getElementById('window-pop').style.display='block'; popMap()"> search </button>
 
       <input id="pac-input"
              class="controls"
@@ -55,13 +50,15 @@
         <div class="box animate">
             <span onclick="document.getElementById('window-pop').style.display='none'" class="close">&times;</span>
 
+            <div id="map"></div>
+
+            <div id="infowindow-content">
+              <span id="place-name" class="title"></span><br>
+              <strong> </strong> <span id="place-id"></span><br>
+              <span id="place-address"></span>
+            </div>
+
             <div id="results">
-              <div id="map"></div>
-              <div id="infowindow-content">
-                <span id="place-name" class="title"></span><br>
-                <strong>Place ID:</strong> <span id="place-id"></span><br>
-                <span id="place-address"></span>
-              </div>
               <div id="listBox">
                 Here are your results :
                 <ul id = "resultlist"></ul>

@@ -229,6 +229,16 @@ button:focus {
   display: inline;
 }
 
+#map{
+  z-index: 3;
+  position: absolute;
+  top: 10vh;
+  left: 4vw;
+  width: 60%;
+  height: 90vh;
+  border-radius: 10px;
+}
+
 
 /*********** pop up css ***********/
 
@@ -289,16 +299,17 @@ button:focus {
   border: 3px solid #dddddd;
   border-radius: 20px;
   border-style: none;
-  padding: 2vh 2vw 2vh 2vw;
-  height: 70vh;
+  padding: 2vh 1vw 2vh 1vw;
+  height: 85vh;
   width: 40vw;
   overflow: scroll;
   position: relative;
-  top: 2vh;
-  left: 0;
+  top: -5vh;
+  left: 3vw;
 }
 
 #resultlist{
+  font-family: 'Scada';
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
