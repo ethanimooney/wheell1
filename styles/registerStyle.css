@@ -109,7 +109,7 @@ h4{
 }
 .a h2{
   font-weight: 700i;
-  padding: 5vh 2.7vw 5vh 2.3vw;
+  padding: 5vh 1.1vh 5vh 2.3vw;
   font-size: 4.5vw;
   color: white;
 }
@@ -140,11 +140,19 @@ h4{
 
 }
 
+/* .fas{
+  z-index: -3;
+  font-size: 40vw;
+  margin-left: 4vw;
+  padding-top: -4vh;
+} */
+
 .paragraphText{
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: .5;
+  margin: auto;
 }
 .actualParagraph{
   display: flex;
@@ -164,33 +172,90 @@ h4{
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-  background-image: url("/images/happy_4.jpg");
+  /* background-image: url("/images/happy_4.jpg");
   background-repeat: no-repeat;
-  background-size: auto auto;
+  background-size: auto auto; */
 }
 .signup{
-  margin: auto;
+  margin-top: 8.2vh;
+  margin-bottom: 8.2vh;
   background-color: white;
   border-radius: 20px;
   padding: 3.3vh 2.4vw 3.3vh 2.4vw;
   height: .5fr;
   width: .75fr;
-
-}
-.signup a{
-  text-decoration: none;
-  background-color: #ee6c52;
-  color: white;
-  border-radius: 20px;
-  padding: 8px;
-  text-align: center;
-  float: right;
-  margin-top: 10px;
-}
-.signup a:hover{
-  background-color: #444444;
 }
 
 #know_each{
   font-size: 1.9vw;
+}
+
+/* Sign up form Styling */
+
+form .signupForm{
+  color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.signupForm input{
+  color: white;
+  width: 100%;
+  text-align: right;
+  border-radius: 20px;
+  background-color: #dddddd;
+  border: none;
+  margin: 0.9vh 0.6vw 0.8vh 0vw;
+  padding: 1.1vh 0.6vw 1.1vh 0vw;
+}
+
+.error {
+	border-color: #ee6c52;
+}
+
+.error-message {
+	color: #ee6c52;
+  font-size: 0.7vw;
+	font-style: italic;
+  font-weight: 400;
+	margin-bottom: 1em;
+  text-align: right;
+}
+
+ input:focus {
+   color: white;
+   width: 100%;
+   text-align: right;
+   border-radius: 20px;
+   background-color: #444444;
+   border: none;
+   margin: 0.9vh 0.6vw 0.8vh 0vw;
+   padding: 1.1vh 0.7vw 1.1vh 0vw;
+}
+.signupForm input:hover {
+      border:none;
+      background-color: #444444;
+      color: white;
+}
+::placeholder{
+  color: white;
+  padding: 0 0 0 0;
+}
+.signupForm button{
+  font-weight: 700;
+  background-color: #ee6c52;
+  color: white;
+  padding: 1.1vh  1.2vw 1.1vh  1.2vw;
+  border-radius: 20px;
+  float: right;
+  border: none;
+  margin-top: 1.3vh;
+}
+ button:hover{
+  background-color: #444444;
 }

@@ -55,6 +55,7 @@ h1{
   position: inherit;
   top: 0vh;
   right: 5vw;
+  text-align: right;
 }
 
 h2{
@@ -288,11 +289,11 @@ nav a{
   color: #ee6c52;
   font-size: 25px;
   /* font-size: 1.8vw; */
-  display: block;
+
   /* margin-top: 6vh;
   margin-right: 3vw; */
   /* margin: 8vh 4vw 8vh 2.5vw; */
-  margin: 55px 55px 55px 0px;
+  margin: 55px 0px 55px 0px;
 }
 nav i{
   display: inline-block;
