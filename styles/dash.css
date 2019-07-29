@@ -7,16 +7,6 @@ body{
 }
 
 /*********** Header CSS ***********/
-.header{
-  top: 0vh;
-  left: 0vw;
-  width: 100%;
-  position: absolute;
-  font-family: 'Scada';
-  font-weight: 700;
-  color: #444444;
-}
-
 #logo{
   padding-top: 4vh;
   padding-left: 2vw;
@@ -32,22 +22,6 @@ i {
   margin-left: 2vw; */
   margin: 35.5px 0px 0px 35.5px;
   color: #ee6c52;
-}
-
-#circle{
-  height: 10.1vh;
-  width: 4.8vw;
-  background-color: #ee6c52;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-h1{
-  margin: 0;
-  font-size: 2.4305555555555554vw;
-  top: 6vh;
-  left: 8vw;
-  position: absolute;
 }
 
 .name{
@@ -95,6 +69,61 @@ h4{
   background-color: #444444;
   color: white;
 }
+
+nav{
+  margin: 0 0 0 0;
+  font-family: "Scada", sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+
+}
+nav ul{
+  list-style: none;
+}
+nav ul li{
+  float: right;
+ }
+nav ul li.info{
+  float: right;
+  margin-right: 85.5px;
+}
+nav ul li a:hover {
+  color: #dddddd;
+}
+nav ul li.logo{
+  float: left;
+  display: inline-block;
+  /* margin-top: 6.3vh;
+  margin-left: 2vw; */
+  margin: 50px 50px 50px 15px;
+  /* font-size: 2.5vw; */
+  font-size: 3.8vh;
+  color: #444444;
+}
+nav a{
+  text-decoration: none;
+  color: #ee6c52;
+  font-size: 25px;
+  /* font-size: 1.8vw; */
+  display: block;
+  /* margin-top: 6vh;
+  margin-right: 3vw; */
+  /* margin: 8vh 4vw 8vh 2.5vw; */
+  margin: 55px 55px 55px 0px;
+}
+nav i{
+  display: inline-block;
+  float: left;
+  /* margin-top: 5vh;
+  margin-left: 2vw; */
+  margin: 35.5px 0px 0px 35.5px;
+  font-size: 8vh;
+  color: #ee6c52;
+}
+
 
 
 /*********** Main Body CSS ***********/
@@ -170,8 +199,7 @@ button:focus {
 .controls {
   position: absolute;
   height: 4vh;
-  top: 5%;
-  margin-left: 19vw;
+  margin-top: 2vh;
   z-index: 1;
   background-color: #fff;
   border-radius: 2px;
@@ -249,57 +277,28 @@ button:focus {
   width: 90%;
   height: 100%;
 }
+/********** Pop-up edits ************/
+#results{
+  position: absolute;
+  left: 45vw;
+  top: 25vh;
+  font-size: 2.5vw;
+}
 
-nav{
-  margin: 0 0 0 0;
-  font-family: "Scada", sans-serif;
-  font-weight: bold;
-  font-size: 100%;
-  background-color: white;
-  width: 100%;
-  overflow: hidden;
+#listBox{
+  border: 3px solid #dddddd;
+  border-radius: 20px;
+  border-style: none;
+  padding: 2vh 2vw 2vh 2vw;
+  height: 70vh;
+  width: 40vw;
+  overflow: scroll;
+  position: relative;
+  top: 2vh;
+  left: 0;
+}
 
-}
-nav ul{
-  list-style: none;
-}
-nav ul li{
-  float: right;
- }
-nav ul li.info{
-  float: right;
-  margin-right: 85.5px;
-}
-nav ul li a:hover {
-  color: #dddddd;
-}
-nav ul li.logo{
-  float: left;
-  display: inline-block;
-  /* margin-top: 6.3vh;
-  margin-left: 2vw; */
-  margin: 50px 50px 50px 15px;
-  /* font-size: 2.5vw; */
-  font-size: 3.8vh;
-  color: #444444;
-}
-nav a{
-  text-decoration: none;
-  color: #ee6c52;
-  font-size: 25px;
-  /* font-size: 1.8vw; */
-  display: block;
-  /* margin-top: 6vh;
-  margin-right: 3vw; */
-  /* margin: 8vh 4vw 8vh 2.5vw; */
-  margin: 55px 55px 55px 0px;
-}
-nav i{
-  display: inline-block;
-  float: left;
-  /* margin-top: 5vh;
-  margin-left: 2vw; */
-  margin: 35.5px 0px 0px 35.5px;
-  font-size: 8vh;
-  color: #ee6c52;
+#resultlist{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
