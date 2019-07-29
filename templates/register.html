@@ -13,9 +13,7 @@
   </head>
   <nav>
     <ul>
-      <li><a href="{{login_url}}">login</a></li>
-      <li><a href="/about">about</a></li>
-      <li><a href="/">home</a></li>
+      
       <i class="fas fa-circle fa-4x"></i>
       <li class="logo">whee//</li>
     </ul>
@@ -38,7 +36,17 @@
           <div class="signup">
             <h2 id="know_each">let's get to know each other.</h2>
             <h4>create a wheell account now</h4>
+            <form class="signupForm" class="validate-me" id="validate-me" method="post" data-validate>
+              <input type="text" name="firstName" value="" placeholder="first name" required>
+              <input type="text" name="lastName" value="" placeholder="last name" required>
+              <input type="email" name="email" value="" placeholder="email" required>
 
+              <h4>must contain 1 upper, 1 lower, 1 number, and be > 8 in length.</h4>
+              <input type="password" name="password" id="password" placeholder="password" minlength="8" data-bouncer-message="Please choose a password that includes at least 1 upper, 1 lower, and 1 number." pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+              <input type="password" name="confirm-password" id="confirm-password" placeholder="repeat password" data-bouncer-match="#password" data-bouncer-mismatch-message="Your passwords do not match." required>
+
+              <button type="submit" name="signUpButton">let's go</button>
+            </form>
           </div>
         </div>
       </div>
