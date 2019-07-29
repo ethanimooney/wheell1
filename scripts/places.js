@@ -105,6 +105,7 @@ function processResponse(response) {
   console.log(response);
 
   for(let i = 0; i < response.features.length; i++) {
+    console.log(response.feature);
     let feature = response.features[i];
     let lng = feature.geometry.coordinates[0];
     let lat = feature.geometry.coordinates[1];
@@ -114,16 +115,28 @@ function processResponse(response) {
     let website = feature.properties.placeWebsiteUrl;
     let accessibility = feature.properties.accessibility.accessibleWith.wheelchair;
     let category = feature.properties.category;
-    let printWheelAcc = "wheelchair accessibility = " + accessibility;
-    let printName = "Name = " + name;
+
+    let printWheelAcc = "";
+
+    if(accessibility == true){
+      printWheelAcc = "This location is wheelchair accessible.";
+    }
+    else{
+      printWheelAcc = "This location is not wheelchair accessible.";
+    }
+    let printName = name;
     // let result = "name=" + name + ", category=" + category + ", address= " + address + ", website=" + website + ", wheelchair accessibility=" + accessibility;
     // $("#resultlist").append('<ul> ' + printName + '</ul>');
     i+=1;
-    $("#resultlist").append('<ul> ' + printWheelAcc + '</ul>')
+    console.log("cleared");
+    $("#resultlist").empty();
+    $("#placeName").empty();
+    $("#placeName").append('<p> ' + printName + '</p>');
+    $("#resultlist").append('<p> ' + printWheelAcc + '</p>');
     if(accessibility == true){
-      $("#listBox").css("background-color", "#7DCE82");
+      $("#accessIcon").css("color", "#7DCE82");
     }else if(accessibility == false){
-      $("#listBox").css("background-color", "#ee6c52");
+      $("#accessIcon").css("color", "#ee6c52");
     }
   }
 }

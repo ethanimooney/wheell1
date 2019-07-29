@@ -31,7 +31,7 @@
     </nav>
 
     <div class="mainBody">
-      <button id="submit" type="button" name="submit"   onclick="document.getElementById('window-pop').style.display='block'; popMap()"> search </button>
+      <button id="submit" type="button" name="submit"   onclick="document.getElementById('window-pop').style.display='block'; popMap()">view</button>
 
       <input id="pac-input"
              class="controls"
@@ -58,8 +58,9 @@
 
             <div id="results">
               <div id="listBox">
-                Here are your results :
-                <ul id = "resultlist"></ul>
+                <i id="accessIcon" class="fas fa-universal-access fa-5x"></i><br><br><br><br><br>
+                <h2 id="placeName"></h2>
+                <p id = "resultlist"></p>
               </div>
             </div>
         </div>

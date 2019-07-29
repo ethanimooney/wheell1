@@ -186,7 +186,7 @@ button:focus {
   position: absolute;
   top: 2.5%;
   width: 95%;
-  height: 95%;
+  height: 60%;
   left: 2.4vw;
   border-radius: 20px;
 }
@@ -256,7 +256,7 @@ button:focus {
   right: 7vw;
   font-family: 'Scada';
   font-size: 5vw;
-  color: #444444;
+  color: #dddddd;
 }
 
 /* when you hover over the X, the X turns into a red color */
@@ -293,18 +293,33 @@ button:focus {
 #listBox{
   border: 3px solid #dddddd;
   border-radius: 20px;
+  background-color: #dddddd;
   border-style: none;
   padding: 2vh 1vw 2vh 1vw;
   height: 85vh;
   width: 40vw;
   overflow: scroll;
   position: relative;
+  margin: auto 0;
   top: -5vh;
   left: 3vw;
+}
+#listBox p{
+  text-align: center;
+  color: #444444;
+}
+#listBox h2{
+  font-family: "Scada", sans-serif;
+}
+#listBox i {
+  text-align: center;
+  margin-left: 13.7vw;
+  margin-right: auto;
 }
 
 #resultlist{
   font-family: 'Scada';
   margin-top: 2vh;
   margin-bottom: 2vh;
+  margin-left: 0;
 }
