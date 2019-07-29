@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome</title>
+    <style>
+        h1{
+          color: lightgreen;
+          font-family: sans-serif;
+          text-align: center
+        }
+        h4{
+          color: red;
+          font-family: sans-serif;
+          text-align: center;
+        }
+        form{
+          text-align:center;
+          padding: 20px;
+        }
+        .center {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          height:265px;
+          width: 400px;
+        }
+    </style>
+  </head>
+  <body>
+      <h1>Meme Generator</h1>
+      <h4>Welcome to my meme generator!</h4>
+
+      <img height="100px" width="100px" class="center" src="https://publicdomainpictures.net/pictures/90000/velka/alpaca-chewing.jpg" alt="a-chewing-alpaca"></img>
+
+      <form method="post">
+        Enter a URL for your meme image: <br>
+        <input type="text" name="urlInput" value=""><br>
+        First Line:<br>
+        <input type="text" name="firstL"> <br>
+        Second Line:<br>
+        <input type="text" name="secondL"><br>
+        <input type="submit" name="submit" value="Memeify!">
+      </form>
+
+  </body>
+</html>
