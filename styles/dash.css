@@ -108,12 +108,6 @@ nav a{
   text-decoration: none;
   color: #ee6c52;
   font-size: 25px;
-  /* font-size: 1.8vw; */
-  display: block;
-  /* margin-top: 6vh;
-  margin-right: 3vw; */
-  /* margin: 8vh 4vw 8vh 2.5vw; */
-  margin: 55px 55px 55px 0px;
 }
 nav i{
   display: inline-block;
@@ -285,18 +279,6 @@ button:focus {
   top: 25vh;
   font-size: 2.5vw;
 }
-
-nav a{
-  text-decoration: none;
-  color: #ee6c52;
-  font-size: 25px;
-  /* font-size: 1.8vw; */
-
-  /* margin-top: 6vh;
-  margin-right: 3vw; */
-  /* margin: 8vh 4vw 8vh 2.5vw; */
-  margin: 55px 0px 55px 0px;
-
 
 #listBox{
   border: 3px solid #dddddd;
