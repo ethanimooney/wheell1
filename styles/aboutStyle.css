@@ -156,8 +156,8 @@ h4{
   flex-direction: row;
   flex-basis: 100%;
   flex: 1;
-  margin-top: 75px;
-  margin-bottom: 75px;
+  margin-top: 8.2vh;
+  margin-bottom: 8.2vh;
   background-color: white;
   border-radius: 20px;
   padding: 1.8vh 0 1.8vh 2.4vw;
@@ -176,12 +176,18 @@ h4{
   flex-direction: column;
   flex-basis: 100%;
   flex: .75;
+  justify-content: center;
+  color: #444444;
+}
+.bio p{
+  color: #444444;
 }
 .images{
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: .25;
+  margin: 10vh 0;
 }
 .image1{
   display: flex;

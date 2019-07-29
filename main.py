@@ -1,7 +1,8 @@
 import webapp2
 import os
 import jinja2
-from userModel import User
+from userModel import Account
+from google.appengine.api import users
 
 the_jinja_env = jinja2.Environment(
      loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -11,96 +12,55 @@ the_jinja_env = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        print("bobbbb")
         landing_template = the_jinja_env.get_template("/templates/index.html")
-        print("kaleree")
-        self.response.write(landing_template.render())
 
+        login_vars = {
+            "login_url": users.create_login_url("/checkuser"),
+        }
+
+        self.response.write(landing_template.render(login_vars))
+
+class CheckUser(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+
+        if user:
+            if not Account.get_by_user(user):
+                self.redirect("/register")
+            else:
+                print("uhh")
+                self.redirect("/dashboard")
+
+class RegisterHandler(webapp2.RequestHandler):
+    def get(self):
+        register_template = the_jinja_env.get_template("/templates/register.html")
+        self.response.write(register_template.render())
     def post(self):
-        landing_template = the_jinja_env.get_template("/templates/index.html")
-        dash_template = the_jinja_env.get_template("/templates/dashBoard.html")
-        print("hello")
+        user = users.get_current_user()
+        user_id = user.user_id()
 
         firstNameInput = self.request.get('firstName')
         lastNameInput = self.request.get('lastName')
         emailInput = self.request.get('email')
         passwordInput = self.request.get('password')
 
-        userLib = {
-            "email":emailInput,
-        }
-        queryLib={
-            'firstNameQuery': User.query(User.email == emailInput).get()
-        }
-        if User.exist(emailInput):
-            print("This email already exists")
-            self.response.write(landing_template.render())
-        elif User.existPass(passwordInput):
-            print("This password already exists")
-            self.response.write(landing_template.render())
-        else:
-            print("create")
-            userLib['email'] =  User(firstName=firstNameInput,
-            lastName=lastNameInput,password=passwordInput,email=emailInput).put()
-            # else:
-            #     print("This password and email already exists")
-            # email=emailInput,
-            # password=passwordInput).put()
-            self.response.headers.add_header('Set-Cookie', 'email=' + str(emailInput))
-            self.response.write(dash_template.render(queryLib))
+        newUser = Account(user_id=user_id, firstName=firstNameInput, lastName=lastNameInput, email=emailInput, password=passwordInput)
 
-
-
-
-        # queryLib = {
-        #                                                 # TODO: make this get current logged in user
-        #     "firstNameQuery": User.query().filter(User.email == "ethanimooney@gmail.com").fetch()[0].firstName
-        # }
-
-        # self.response.write(dash_template.render(queryLib))
-
-class LoginHandler(webapp2.RequestHandler):
-    def get(self):
-        login_template = the_jinja_env.get_template("/templates/login.html")
-        self.response.write(login_template.render())
-
-        # login_template = the_jinja_env.get_template("/templates/login.html")
-        # self.response.write(login_template.render())
-    def post(self):
-        dash_template = the_jinja_env.get_template("/templates/dashBoard.html")
-        login_template = the_jinja_env.get_template("/templates/login.html")
-
-        emailInput = self.request.get('email')
-        passwordInput = self.request.get('password')
-
-        print("About to start")
-
-        if User.exist(emailInput) == None and User.existPass(passwordInput) == None:
-            print("Wrong")
-            self.response.write(login_template.render())
-            print("WRONG")
-        else:
-            if User.exist(emailInput):
-                print("first one")
-                if User.existPass(passwordInput):
-                    print("You have signed in correctly")
-                    self.response.write(dash_template.render())
-                    self.response.headers.add_header('Set-Cookie', 'email=' + str(User.getEmail()))
-        # if User.emailCheck(emailInput) and User.passCheck(passwordInput):
-        #     print("Does work")
-        #     self.response.write(dash_template.render())
-        #     print("Works")
-        #     self.response.headers.add_header('Set-Cookie', 'email=' + str(User.getEmail()))
-
-
-
+        newUser.put()
+        print("three")
+        self.redirect("/dashboard")
 
 class DashHandler(webapp2.RequestHandler):
     def get(self):
-        email = self.request.cookies.get('email')
-        # if User.getEmail == email
         dash_template = the_jinja_env.get_template("/templates/dashBoard.html")
-        self.response.write(dash_template.render())
+
+        logoutUrl = users.create_logout_url("/")
+
+        logout_vars = {
+            "logout_url": logoutUrl
+        }
+
+        self.response.write(dash_template.render(logout_vars))
     def post(self):
         dash_template = the_jinja_env.get_template("/templates/dashBoard.html")
         self.response.write(dash_template.render())
@@ -112,24 +72,19 @@ class PopUpHandler(webapp2.RequestHandler):
         dash_template = the_jinja_env.get_template("/templates/dashboard.html")
         self.response.write(dash_template.render())
 
-class LogOutHandler(webapp2.RequestHandler):
-    def get(self):
-        pass
-    def post(self):
-        self.response.headers.add_header('Set-Cookie', 'email=' + 'empty')
-        logout_template = the_jinja_env.get_template("/templates/login.html")
-        self.response.write(logout_template.render())
-
 class AboutHandler(webapp2.RequestHandler):
     def get(self):
+        login_vars = {
+            "login_url": users.create_login_url("/checkuser"),
+        }
         about_template = the_jinja_env.get_template("/templates/about.html")
-        self.response.write(about_template.render())
+        self.response.write(about_template.render(login_vars))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/login', LoginHandler),
+    ('/register', RegisterHandler),
+    ('/checkuser', CheckUser),
     ('/dashboard', DashHandler),
     ('/popup', PopUpHandler),
-    ('/logout', LogOutHandler),
     ('/about', AboutHandler),
 ], debug=True)
