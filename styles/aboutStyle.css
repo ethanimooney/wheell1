@@ -187,7 +187,7 @@ h4{
   flex-direction: column;
   flex-basis: 100%;
   flex: .25;
-  margin: 10vh 0;
+  margin: 0vh 0;
 }
 .image1{
   display: flex;
@@ -225,8 +225,6 @@ h4{
   border-radius: 109vh;
   margin: auto auto auto auto;
 }
-
-
 #know_each{
   font-size: 1.9vw;
 }
